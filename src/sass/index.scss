@@ -1,2 +1,21 @@
 @import './common';
 @import './example';
+
+// UTILS STYLES
+@import './utils/variables';
+@import './utils/placeholder';
+
+// BASE STYLES
+@import './base/base';
+@import './base/reset';
+
+// COMPONENTS STYLES
+@import './components/header';
+@import './components/hero';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/reviews';
+@import './components/contacts';
+@import './components/footer';
