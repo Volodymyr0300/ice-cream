@@ -43,7 +43,6 @@
     letter-spacing: 0;
   }
 }
-
 .about__title {
   font-family: 'Seymour One';
   font-weight: 400;
@@ -63,11 +62,23 @@
   }
 }
 .about__list {
+  @media screen and (min-width: 480px) {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 72px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 82px;
+  }
 }
 .about__item {
-  //   margin-top: 90px;
+}
+.about__bc-img {
 }
 .about__picture {
+}
+.about__cow {
 }
 .about__text {
   font-weight: 400;
@@ -84,4 +95,6 @@
   font-size: 14px;
   line-height: 1.29; /* 18px/14 128.571429%*/
   color: var(--main-text-color);
+}
+.about__btn-svg {
 }
