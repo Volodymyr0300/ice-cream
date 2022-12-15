@@ -1,0 +1,150 @@
+// width/padding variables
+$big-container: 1600px;
+
+$min-mobile: 480px;
+$min-tablet: 768px;
+$min-desktop: 1200px;
+
+$max-mobile: 767.98px;
+$max-tablet: 1199.98px;
+
+$padding-container: 16px;
+/* глобальні налаштування */
+body {
+  // width: 100vw;
+  // margin: 0 auto;
+  //   font-family: var(--prime-font-family--);
+  //   /*'Roboto', sans-serif*/
+  //   color: var(--text-color--);
+  //   background-color: var(--prime-bg-color--);
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+/*загальне налаштування для кнопок */
+.btn {
+  //   font-family: var(--prime-font-family--);
+  border: none;
+  cursor: pointer;
+}
+
+/* контейнер  */
+.container {
+  margin: 0 auto;
+  padding: 0 $padding-container;
+  @media screen and (min-width: $min-mobile) {
+    width: $min-mobile;
+  }
+  @media screen and (min-width: $min-tablet) {
+    width: $min-tablet;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: $min-desktop;
+  }
+}
+/* спільна властивість секцій */
+.section {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+/* скриває елемент */
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.products {
+  &.section {
+    margin: 0 auto;
+    // color: var(--prime-bg-color--);
+    background: #d9d9d9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-image: url('../images/products/bg_sm@1x.png'); //mobile first
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/products/bg_sm@2x.jpg'); //mobile retina
+    }
+
+    @media screen and (min-width: $min-tablet) {
+      background-image: url('../images/products/bg_md@1x.jpg'); //tablet
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/products/bg_md@2x.jpg'); //tablet retina
+      }
+    }
+    //desktop
+    @media screen and (min-width: $min-desktop) {
+      background-image: url('../images/products/bg_lg@1x.jpg'); //desktop
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/products/bg_lg@2x.jpg'); //desktop retina
+      }
+    }
+  } //&.section
+  & .section-subtitle {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 12px;
+    @media screen and (min-width: $min-tablet) {
+      font-size: 22px;
+      line-height: calc(27 / 22);
+    }
+    @media screen and (min-width: $min-desktop) {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
+  } //& .section-subtitle
+
+  & .section-title {
+    font-family: 'Seymour One', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: calc(38 / 30);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 40px;
+    @media screen and (min-width: $min-tablet) {
+      font-size: 34px;
+      line-height: calc(43 / 34);
+      margin-bottom: 80px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      font-size: 36px;
+      line-height: calc(45 / 36);
+      letter-spacing: 0.06em;
+      margin-bottom: 120px;
+    }
+  } // & .section-title
+
+  &__list {
+    margin: 0 auto;
+    @media screen and (min-width: $min-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      gap: 29px;
+    }
+  } // &__list
+} //.products
