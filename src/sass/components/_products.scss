@@ -147,4 +147,29 @@ body {
       gap: 29px;
     }
   } // &__list
+  &__item {
+    min-width: 280px;
+    min-height: 420px;
+    margin-bottom: 60px;
+     @media screen and (min-width: $min-tablet) {
+      min-width: 224px;
+      min-height: 428px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      min-width: 370px;
+      min-height: 536px;
+
+  } //&__item
+  &__title {
+    text-align: center;
+  } //&__title
+  &__text {
+    text-align: center;
+  } //&__text
+  &__button {
+    display: flex;
+    border: none;
+    justify-content: center;
+    background-color: #d9d9d9;
+  }
 } //.products
