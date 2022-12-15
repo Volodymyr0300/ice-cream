@@ -70,26 +70,26 @@ body {
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url('../images/products/bg_sm@2x.jpg'); //mobile retina
+      background-image: url('../images/products/bg_sm@2x.png'); //mobile retina
     }
 
     @media screen and (min-width: $min-tablet) {
-      background-image: url('../images/products/bg_md@1x.jpg'); //tablet
+      background-image: url('../images/products/bg_md@1x.png'); //tablet
 
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url('../images/products/bg_md@2x.jpg'); //tablet retina
+        background-image: url('../images/products/bg_md@2x.png'); //tablet retina
       }
     }
     //desktop
     @media screen and (min-width: $min-desktop) {
-      background-image: url('../images/products/bg_lg@1x.jpg'); //desktop
+      background-image: url('../images/products/bg_lg@1x.png'); //desktop
 
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url('../images/products/bg_lg@2x.jpg'); //desktop retina
+        background-image: url('../images/products/bg_lg@2x.png'); //desktop retina
       }
     }
   } //&.section
