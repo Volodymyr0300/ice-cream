@@ -1,15 +1,14 @@
 @import './common';
-@import './example';
 
 // UTILS STYLES
 @import './utils/variables';
-@import './utils/placeholder';
 
 // BASE STYLES
 @import './base/base';
 @import './base/reset';
 
 // COMPONENTS STYLES
+@import './components/container';
 @import './components/header';
 @import './components/hero';
 @import './components/products';
