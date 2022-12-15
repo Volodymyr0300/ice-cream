@@ -12,7 +12,7 @@
 }
 
 .contacts__ithem {
-    max-width: 280px;
+    width: 280px;
     height: 412px;
     background: #FCFCFC;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -23,14 +23,30 @@
     &:last-child {
         margin-bottom: 0;
     }
-    
+    @media screen and (min-width: 768px) {
+        width: 224px;
+        height: 537px;
+        display: inline-flex;
+        margin-bottom: 0;
+        padding: 40px 24px;
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .contacts__location {
     margin-bottom: 48px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 64px;
+    }
 }
 .contacts__week {
     margin-bottom: 48px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 64px;
+    }
 }
 
 .contacts__title {
@@ -49,6 +65,12 @@
     background: #F8D24E;
     border-radius: 4px;
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 140%;
+        padding: 4px 14px;
+    }
 }
 
 .contacts__location--text {
@@ -61,6 +83,11 @@
     letter-spacing: 0.04em;
     color: #131313;
     margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 186%;
+    }
 }
 
 .contacts__location--link {
@@ -72,6 +99,10 @@
         /* or 22px */
     letter-spacing: 0.04em;
     color: #D6936D;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 183%;
+    }
 }
 
 .contacts__week--working {
@@ -86,6 +117,10 @@
     line-height: 186%;
     /* or 22px */
     color: #131313;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 186%;
+    }
 }
 .contacts__week--working--time {
     font-family: 'Montserrat';
@@ -95,6 +130,10 @@
     line-height: 186%;
     /* or 22px */
     color: #ABABAB;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 186%;
+    }
 }
 
 .contacts__tel, .contacts__mail {
@@ -105,6 +144,10 @@
     line-height: 160%;
     /* or 19px */
     color: #131313;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 150%;
+    }
 }
 
 .contacts__btn {
@@ -119,10 +162,34 @@
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .contacts__btn-franchise {
     border-radius: 4px;
-    border: none;
+    
     background-color: transparent;
+    border-color: #F8D24E;
+}
+
+.contacts-btn__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+.contacts-btn__ithem {
+    @media screen and (min-width: 768px) {
+        display: inline-flex;
+        
+    }
+}
+.contacts-btn__ithem--margin {
+    @media screen and (min-width: 768px) {
+        margin-right: 16px;
+    }
 }
