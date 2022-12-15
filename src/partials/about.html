@@ -5,9 +5,20 @@
     <ul class="about__list">
       <li class="about__item">
         <div class="about__bc-img"></div>
-        <picture class="about__picture">
-          <!-- <img class="about__cow" src="" alt="" loading="lazy" /> -->
-        </picture>
+        <img
+          class="about__cow-img"
+          srcset="
+            ./images/about/cow/img-cow_279.jpg 279w,
+            ./images/about/cow/img-cow_330.jpg 330w,
+            ./images/about/cow/img-cow_490.jpg 490w,
+            ./images/about/cow/img-cow_558.jpg 558w,
+            ./images/about/cow/img-cow_660.jpg 660w,
+            ./images/about/cow/img-cow_980.jpg 980w
+          "
+          sizes="(min-width: 1200px) 490px, (min-width: 768px) 330px, (min-width: 480px) 279px, 100vw"
+          src="./images/about/cow/img-cow_490.jpg"
+          alt="foto-product-designer"
+        />
       </li>
       <li class="about__item">
         <p class="about__text">
@@ -25,10 +36,12 @@
           This is enough to choose ice cream and coffee for any mood!
         </p>
         <button class="about__btn" type="button">
-          <span class="about__btn-text">Read more</span>
-          <svg class="about__btn-svg" width="12" height="12">
-            <use href="./images/about/symbol-defs.svg#icon-arrow"></use>
-          </svg>
+          <div class="about__btn-cont">
+            <span class="about__btn-text">Read more</span>
+            <svg class="about__btn-svg" width="12" height="12">
+              <use href="./images/about/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </div>
         </button>
       </li>
     </ul>

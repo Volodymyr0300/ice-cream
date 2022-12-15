@@ -71,13 +71,16 @@
   @media screen and (min-width: 1200px) {
     margin-top: 82px;
   }
-  position: relative;
 }
 .about__item {
   display: block;
-  &:not(:first-child) {
-    padding-top: 40px;
+  @media screen and (min-width: 480px) {
+    &:not(:first-child) {
+      padding-top: 62px;
+    }
   }
+
+  position: relative;
 }
 
 .about__bc-img {
@@ -109,23 +112,59 @@
 }
 .about__picture {
 }
-.about__cow {
+.about__cow-img {
+  border-radius: 140px;
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .about__text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.76 /* 176% */;
-  letter-spacing: 0.04em;
-  letter-spacing: 0.04em;
   color: var(--second-color);
+  text-align: center;
+  @media screen and (min-width: 480px) {
+    &:first-child {
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+      line-height: 1.76 /* 176% */;
+    }
+    &:nth-child(2) {
+      letter-spacing: 0;
+      line-height: 1.62;
+    }
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:nth-child(3) {
+      display: block;
+    }
+  }
 }
 .about__btn {
+  background-color: #f8d24e;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+}
+.about__btn-cont {
+  padding: 12px 37px 12px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about__btn-text {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29; /* 18px/14 128.571429%*/
   color: var(--main-text-color);
+  margin-right: 7px;
 }
 .about__btn-svg {
 }
