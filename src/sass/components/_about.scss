@@ -71,10 +71,41 @@
   @media screen and (min-width: 1200px) {
     margin-top: 82px;
   }
+  position: relative;
 }
 .about__item {
+  display: block;
+  &:not(:first-child) {
+    padding-top: 40px;
+  }
 }
+
 .about__bc-img {
+  margin: 0 auto;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  @media screen and (min-width: 480px) {
+    width: 279px;
+    min-height: 279px;
+    box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+    border-radius: 140px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 330px;
+    min-height: 330px;
+    box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
+    border-radius: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 490px;
+    min-height: 490px;
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+    border-radius: 250px;
+  }
 }
 .about__picture {
 }
