@@ -23,21 +23,22 @@ body {
 }
 
 /* контейнер  */
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-  @media screen and (min-width: $min-mobile) {
-    width: $min-mobile;
-  }
-  @media screen and (min-width: $min-tablet) {
-    width: $min-tablet;
-    padding: 0 32px;
-  }
-  @media screen and (min-width: $min-desktop) {
-    width: $min-desktop;
-    padding: 0 16px;
-  }
-}
+// .container {
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 20px;
+//   @media screen and (min-width: $min-mobile) {
+//     width: $min-mobile;
+//   }
+//   @media screen and (min-width: $min-tablet) {
+//     width: $min-tablet;
+//     padding: 0 32px;
+//   }
+//   @media screen and (min-width: $min-desktop) {
+//     width: $min-desktop;
+//     padding: 0 16px;
+//   }
+// }//.container
 /* спільна властивість секцій */
 .section {
   padding-bottom: 60px;
@@ -105,18 +106,19 @@ body {
     }
   } // &__list
   &__item {
+    margin: 0 auto;
     position: relative;
-    min-width: 280px;
-    min-height: 420px;
+    width: 280px;
+    height: 420px;
     margin-bottom: 168px;
     border-radius: 24px;
     @media screen and (min-width: $min-tablet) {
-      min-width: 224px;
-      min-height: 428px;
+      width: 224px;
+      height: 428px;
     }
     @media screen and (min-width: $min-desktop) {
-      min-width: 370px;
-      min-height: 719px;
+      width: 370px;
+      height: 719px;
     }
     &--ice-cream {
       background-color: #aec6a5;
