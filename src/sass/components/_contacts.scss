@@ -222,40 +222,60 @@
     height: 42px;
     display: block;
     margin: auto;
+    color: #131313;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.29;
+        cursor: pointer;
+    border-radius: 10px;
 }
 .contacts__btn-locations {
     background-color: #F8D24E;
-    border-radius: 4px;
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
-    color: #131313;
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
     }
-}
-.contacts__btn-locations:focus-visible {
-    outline: none;
-}
-.contacts__btn-locations:hover {
-    background-color: #0A8817;
-    border: none;
-    color: #000000;
-}
-.contacts__btn-locations:focus {
-    background-color: #0A8817;
-    color: #FFFFFF;
+    &:focus-visible {
+        outline: none;
+    }
+    &:hover {
+        background-color: #0A8817;
+        color: #000000;
+    }
+    &:focus {
+        background-color: #0A8817;
+        color: #FFFFFF;
+    }
+        &:disabled,
+        &[disabled] {
+        background: #ABABAB;    
+        }
 }
 
 
 .contacts__btn-franchise {
-    border-radius: 4px;
     background-color: transparent;
-    border-color: #F8D24E;
+    color: #000000;
+    border: 2px solid #F8D24E;
     &:focus-visible {
-            outline: none;
-        }
+        outline: none;
+    }
+    &:hover {
+    border: 2px solid #0A8817;
+    }
+    &:focus {
+        border: 2px solid #0A8817;
+        color: #FFFFFF;
+    }
+    &:disabled,
+    &[disabled] {
+        border: 2px solid #ABABAB;
+    }
 }
 
 .contacts-btn__list {
@@ -275,21 +295,4 @@
     @media screen and (min-width: 768px) {
         margin-right: 16px;
     }
-}
-
-.contacts__btn-locations--text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    color: #131313;
-}
-.contacts__btn-franchise--text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    color: #000000;
 }
