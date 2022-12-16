@@ -21,6 +21,7 @@
 
 
 .contacts__box {
+    max-width: 1600px;
     background-image: 
     linear-gradient(rgba(255, 255, 255, .1) 0,
     rgba(255, 255, 255, .1) 353px,
@@ -39,6 +40,7 @@
                     rgba(255, 255, 255, .1) 128px,
                     #84A178 128px, #84A178 100%);
         }
+    
 }
 
 .contacts__before::before {
