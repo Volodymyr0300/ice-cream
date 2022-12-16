@@ -1,4 +1,26 @@
 .gallery__container {
     display: flex;
     justify-content: center;
+
+    background-image: linear-gradient(
+    to bottom,
+    #84A178 25%,
+    transparent 25%
+    );
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(
+        to bottom,
+        #84A178 44%,
+        transparent 44%
+        ); 
+    } 
+
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(
+        to bottom,
+        #84A178 23%,
+        transparent 23%
+        );
+    }
 }
