@@ -13,14 +13,8 @@
     overflow: hidden;
 }
 
-.contacts__list {
-
-}
-.contacts__address {
-}
-
-
 .contacts__box {
+    padding-bottom: 60px;
     max-width: 1600px;
     background-image: 
     linear-gradient(rgba(255, 255, 255, .1) 0,
@@ -28,13 +22,14 @@
     #84A178 353px, #84A178 100%);
 
     @media screen and (min-width: 768px) {
-        
+        padding-bottom: 40px;
         background-image:
         linear-gradient(rgba(255, 255, 255, .1) 0,
         rgba(255, 255, 255, .1) 299px,
         #84A178 299px, #84A178 100%);
     }
     @media screen and (min-width: 1200px) {
+        padding-bottom: 120px;
             background-image:
                 linear-gradient(rgba(255, 255, 255, .1) 0,
                     rgba(255, 255, 255, .1) 128px,
