@@ -229,17 +229,33 @@
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
+    color: #131313;
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
+.contacts__btn-locations:focus-visible {
+    outline: none;
+}
+.contacts__btn-locations:hover {
+    background-color: #0A8817;
+    border: none;
+    color: #000000;
+}
+.contacts__btn-locations:focus {
+    background-color: #0A8817;
+    color: #FFFFFF;
+}
+
 
 .contacts__btn-franchise {
     border-radius: 4px;
-    
     background-color: transparent;
     border-color: #F8D24E;
+    &:focus-visible {
+            outline: none;
+        }
 }
 
 .contacts-btn__list {
@@ -259,4 +275,21 @@
     @media screen and (min-width: 768px) {
         margin-right: 16px;
     }
+}
+
+.contacts__btn-locations--text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #131313;
+}
+.contacts__btn-franchise--text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #000000;
 }
