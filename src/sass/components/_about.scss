@@ -10,23 +10,6 @@
   }
 }
 .about__container {
-  width: 100%;
-  margin: 0 auto;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 0 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding: 0 16px;
-  }
 }
 .about__text-slogan {
   font-weight: 700;
@@ -107,7 +90,6 @@
       padding-top: 90px;
     }
   }
-
   position: relative;
 }
 .about__bc-img {
@@ -191,7 +173,7 @@
   }
 }
 .about__btn {
-  background-color: #f8d24e;
+  background-color: var(--accent-color);
   border-radius: 10px;
   display: block;
   padding: 0;
@@ -235,12 +217,9 @@
     fill: var(--second-color);
   }
 }
-
 .overlay {
-  /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -250,44 +229,35 @@
   z-index: 20;
   transition: 0.3s all;
 }
-
-/* Стили для модальных окон */
-
 .modal {
-  /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-
-  /*  Установаем ширину окна  */
   width: 100%;
   max-width: 280px;
   @media screen and (min-width: 768px) {
     max-width: 568px;
   }
 
-  /*  Центрируем и задаем z-index */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
+  z-index: 30;
 
-  /*  Побочные стили   */
   padding: 28px;
+  @media screen and (min-width: 768px) {
+    padding: 32px 60px;
+  }
   border-radius: 10px;
   border: 2px solid var(--accent-color);
   background-color: var(--second-color);
 }
-
-/* Стили для активных классов подложки и окна */
 
 .modal.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
-/* Стили для кнопки закрытия */
 
 .modal__cross {
   width: 20px;
@@ -297,9 +267,27 @@
   right: 12px;
   fill: #444;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    border: 1px solid #0a8817;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 10);
+  }
+  &:hover {
+    background-color: rgb(148, 206, 91);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:focus {
+    fill: var(--second-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: cornflowerblue;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
 .about__modal-title {
   font-family: 'Seymour One';
   font-weight: 400;
@@ -311,5 +299,26 @@
     font-size: 20px;
     line-height: 1.4; /* 28px/20 140%*/
     margin-bottom: 32px;
+  }
+}
+.about__modal-iframe {
+  background-color: var(--main-text-color);
+  border-radius: 10px;
+  width: 224px;
+  height: 199px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    width: 448px;
+    height: 205px;
+    background-color: #000000;
+  }
+}
+.about__modal-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4; /* 140% */
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
   }
 }
