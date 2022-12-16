@@ -14,6 +14,10 @@
 .contacts__address {
 }
 
+.contacts__box {
+    background: #84A178;
+}
+
 .contacts__before::before {
     content: "";
     display: block;
@@ -95,7 +99,7 @@
 }
 
 .contacts__title {
-    font-family: 'Montserrat';
+    
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -119,7 +123,6 @@
 }
 
 .contacts__location--text {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -141,7 +144,6 @@
 }
 
 .contacts__location--link {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -164,7 +166,7 @@
 }
 
 .contacts__week--working--days {
-    font-family: 'Montserrat';
+    
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -181,7 +183,7 @@
         }
 }
 .contacts__week--working--time {
-    font-family: 'Montserrat';
+    
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -200,7 +202,7 @@
 .contacts__tel-mail {}
 
 .contacts__tel, .contacts__mail {
-    font-family: 'Montserrat';
+    
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -218,12 +220,13 @@
 }
 
 .contacts__btn {
+    position: relative;
     width: 196px;
     height: 42px;
     display: block;
     margin: auto;
     color: #131313;
-        font-family: 'Montserrat';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -236,6 +239,7 @@
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
+    color: #131313;
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -250,6 +254,7 @@
     &:focus {
         background-color: #0A8817;
         color: #FFFFFF;
+        fill: #FFFFFF;
     }
         &:disabled,
         &[disabled] {
@@ -271,6 +276,8 @@
     &:focus {
         border: 2px solid #0A8817;
         color: #FFFFFF;
+        fill: #FFFFFF;
+        
     }
     &:disabled,
     &[disabled] {
@@ -295,4 +302,12 @@
     @media screen and (min-width: 768px) {
         margin-right: 16px;
     }
+}
+
+.contacts-btn__svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    position: absolute;
+    bottom: 33%;
 }
