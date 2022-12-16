@@ -1,3 +1,5 @@
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -11,11 +13,32 @@
     overflow: hidden;
 }
 
+.contacts__list {
+
+}
 .contacts__address {
 }
 
+
 .contacts__box {
-    background: #84A178;
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, .1) 0,
+    rgba(255, 255, 255, .1) 353px,
+    #84A178 353px, #84A178 100%);
+
+    @media screen and (min-width: 768px) {
+        
+        background-image:
+        linear-gradient(rgba(255, 255, 255, .1) 0,
+        rgba(255, 255, 255, .1) 299px,
+        #84A178 299px, #84A178 100%);
+    }
+    @media screen and (min-width: 1200px) {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .1) 0,
+                    rgba(255, 255, 255, .1) 128px,
+                    #84A178 128px, #84A178 100%);
+        }
 }
 
 .contacts__before::before {
@@ -56,7 +79,7 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     padding: 40px 32px 24px 32px;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 16px;
     &:last-child {
         margin-bottom: 0;
