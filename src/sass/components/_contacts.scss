@@ -11,6 +11,40 @@
     overflow: hidden;
 }
 
+.contacts__address {
+}
+
+.contacts__before::before {
+    content: "";
+    display: block;
+    width: 216px;
+    height: 0px;
+    border: 1px solid #E1E1E1;
+    position: absolute;
+    bottom: 125%;
+    @media screen and (min-width: 768px) {
+        width: 176px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 288px;
+    }
+}
+.contacts__after::after {
+    content: "";
+    display: block;
+    width: 216px;
+    height: 0px;
+    border: 1px solid #E1E1E1;
+    position: absolute;
+    top: 125%;
+    @media screen and (min-width: 768px) {
+        width: 176px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 288px;
+    }
+}
+
 .contacts__ithem {
     width: 280px;
     height: 412px;
@@ -34,6 +68,16 @@
             margin-right: 0;
         }
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 368px;
+        height: 542px;
+        padding: 40px;
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .contacts__location {
@@ -43,6 +87,7 @@
     }
 }
 .contacts__week {
+    position: relative;
     margin-bottom: 48px;
     @media screen and (min-width: 768px) {
         margin-bottom: 64px;
@@ -88,6 +133,11 @@
         font-size: 14px;
         line-height: 186%;
     }
+        @media screen and (min-width: 1200px) {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 186%;
+    }
 }
 
 .contacts__location--link {
@@ -102,6 +152,10 @@
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 183%;
+    }
+    @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 183%;
     }
 }
 
@@ -121,6 +175,10 @@
         font-size: 14px;
         line-height: 186%;
     }
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 186%;
+        }
 }
 .contacts__week--working--time {
     font-family: 'Montserrat';
@@ -134,7 +192,12 @@
         font-size: 14px;
         line-height: 186%;
     }
+    @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 186%;
+    }
 }
+.contacts__tel-mail {}
 
 .contacts__tel, .contacts__mail {
     font-family: 'Montserrat';
@@ -147,6 +210,10 @@
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 150%;
+    }
+    @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 150%;
     }
 }
 
