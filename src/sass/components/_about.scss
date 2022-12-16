@@ -173,9 +173,6 @@
   @media screen and (min-width: 768px) {
     text-align: start;
     &:nth-child(3) {
-      //   display: block;
-    }
-    &:nth-child(3) {
       line-height: 1.94; /* 194% */
       letter-spacing: 0.04em;
     }
@@ -263,7 +260,10 @@
 
   /*  Установаем ширину окна  */
   width: 100%;
-  max-width: 500px;
+  max-width: 280px;
+  @media screen and (min-width: 768px) {
+    max-width: 568px;
+  }
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -273,12 +273,10 @@
   z-index: 30; /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 30px;
-  border-radius: 3px;
-  background-color: #fff;
-  transition: 0.3s all;
+  padding: 28px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--second-color);
 }
 
 /* Стили для активных классов подложки и окна */
@@ -292,23 +290,26 @@
 /* Стили для кнопки закрытия */
 
 .modal__cross {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   fill: #444;
   cursor: pointer;
 }
 
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
-
-a {
-  padding: 20px;
-  display: inline-block;
-  text-decoration: none;
-  background-color: #414b52;
-  margin: 10px;
-  color: #fff;
-  border-radius: 3px;
+.about__modal-title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5; /* 24px/16 150%*/
+  margin-bottom: 20px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.4; /* 28px/20 140%*/
+    margin-bottom: 32px;
+  }
 }

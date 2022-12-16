@@ -28,9 +28,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-  var modalButtons = document.querySelectorAll('.js-open-modal'),
-    overlay = document.querySelector('.js-overlay-modal'),
-    closeButtons = document.querySelectorAll('.js-modal-close');
+  var modalButtons = document.querySelectorAll('.about__js-open-modal'),
+    overlay = document.querySelector('.about__js-overlay-modal'),
+    closeButtons = document.querySelectorAll('.about__js-modal-close');
 
   /* Перебираем массив кнопок */
   modalButtons.forEach(function (item) {
