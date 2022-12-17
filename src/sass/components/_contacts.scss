@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -19,22 +15,18 @@
 .contacts__box {
     padding-bottom: 60px;
     max-width: 1600px;
-<<<<<<< Updated upstream
     background-image: 
     linear-gradient(rgba(255, 255, 255, .1) 0,
     rgba(255, 255, 255, .1) 353px,
     #84A178 353px, #84A178 100%);
-=======
     background-image:
         linear-gradient(rgba(255, 255, 255, .1) 0,
             rgba(255, 255, 255, .1) 353px,
             #84A178 353px, #84A178 100%);
->>>>>>> Stashed changes
 
     @media screen and (min-width: 768px) {
         padding-bottom: 40px;
         background-image:
-<<<<<<< Updated upstream
         linear-gradient(rgba(255, 255, 255, .1) 0,
         rgba(255, 255, 255, .1) 299px,
         #84A178 299px, #84A178 100%);
@@ -47,12 +39,6 @@
                     #84A178 128px, #84A178 100%);
         }
     
-=======
-            linear-gradient(rgba(255, 255, 255, .1) 0,
-                rgba(255, 255, 255, .1) 299px,
-                #84A178 299px, #84A178 100%);
-    }
-
     @media screen and (min-width: 1200px) {
         padding-bottom: 120px;
         background-image:
@@ -61,7 +47,6 @@
                 #84A178 128px, #84A178 100%);
     }
 
->>>>>>> Stashed changes
 }
 
 .contacts__before::before {
@@ -72,25 +57,17 @@
     border: 1px solid #E1E1E1;
     position: absolute;
     bottom: 125%;
-<<<<<<< Updated upstream
     @media screen and (min-width: 768px) {
         width: 176px;
     }
-=======
-
     @media screen and (min-width: 768px) {
         width: 176px;
     }
 
->>>>>>> Stashed changes
     @media screen and (min-width: 1200px) {
         width: 288px;
     }
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .contacts__after::after {
     content: "";
     display: block;
@@ -99,17 +76,12 @@
     border: 1px solid #E1E1E1;
     position: absolute;
     top: 125%;
-<<<<<<< Updated upstream
     @media screen and (min-width: 768px) {
         width: 176px;
     }
-=======
-
     @media screen and (min-width: 768px) {
         width: 176px;
     }
-
->>>>>>> Stashed changes
     @media screen and (min-width: 1200px) {
         width: 288px;
     }
@@ -124,17 +96,13 @@
     padding: 40px 32px 24px 32px;
     margin: 0 auto;
     margin-bottom: 16px;
-<<<<<<< Updated upstream
     &:last-child {
         margin-bottom: 0;
     }
-=======
-
     &:last-child {
         margin-bottom: 0;
     }
 
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         width: 224px;
         height: 537px;
@@ -142,10 +110,6 @@
         margin-bottom: 0;
         padding: 40px 24px;
         margin-right: 16px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         &:last-child {
             margin-right: 0;
         }
@@ -156,10 +120,6 @@
         height: 542px;
         padding: 40px;
         margin-right: 32px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         &:last-child {
             margin-right: 0;
         }
@@ -168,36 +128,23 @@
 
 .contacts__location {
     margin-bottom: 48px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         margin-bottom: 64px;
     }
 }
-<<<<<<< Updated upstream
-.contacts__week {
-    position: relative;
-    margin-bottom: 48px;
-=======
-
 .contacts__week {
     position: relative;
     margin-bottom: 48px;
 
->>>>>>> Stashed changes
+.contacts__week {
+    position: relative;
+    margin-bottom: 48px;
     @media screen and (min-width: 768px) {
         margin-bottom: 64px;
     }
 }
 
 .contacts__title {
-<<<<<<< Updated upstream
-    
-=======
-
->>>>>>> Stashed changes
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -212,10 +159,6 @@
     background: #F8D24E;
     border-radius: 4px;
     margin-bottom: 20px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
         font-size: 16px;
@@ -229,29 +172,23 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 186%;
-<<<<<<< Updated upstream
         /* or 22px */    
     letter-spacing: 0.04em;
     color: #131313;
     margin-bottom: 8px;
-=======
     /* or 22px */
     letter-spacing: 0.04em;
     color: #131313;
     margin-bottom: 8px;
 
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         margin-bottom: 12px;
         font-size: 14px;
         line-height: 186%;
     }
-<<<<<<< Updated upstream
         @media screen and (min-width: 1200px) {
-=======
 
     @media screen and (min-width: 1200px) {
->>>>>>> Stashed changes
         margin-bottom: 8px;
         font-size: 16px;
         line-height: 186%;
@@ -263,30 +200,24 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 183%;
-<<<<<<< Updated upstream
         /* or 22px */
     letter-spacing: 0.04em;
     color: #D6936D;
-=======
     /* or 22px */
     letter-spacing: 0.04em;
     color: #D6936D;
 
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 183%;
     }
-<<<<<<< Updated upstream
     @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 183%;
-=======
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 183%;
->>>>>>> Stashed changes
     }
 }
 
@@ -295,35 +226,22 @@
 }
 
 .contacts__week--working--days {
-<<<<<<< Updated upstream
-    
-=======
-
->>>>>>> Stashed changes
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 186%;
     /* or 22px */
     color: #131313;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 186%;
     }
-<<<<<<< Updated upstream
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 186%;
         }
 }
 .contacts__week--working--time {
-    
-=======
-
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 186%;
@@ -332,22 +250,16 @@
 
 .contacts__week--working--time {
 
->>>>>>> Stashed changes
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 186%;
     /* or 22px */
     color: #ABABAB;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 186%;
     }
-<<<<<<< Updated upstream
     @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 186%;
@@ -356,8 +268,6 @@
 .contacts__tel-mail {}
 
 .contacts__tel, .contacts__mail {
-    
-=======
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;
@@ -370,31 +280,25 @@
 .contacts__tel,
 .contacts__mail {
 
->>>>>>> Stashed changes
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 160%;
     /* or 19px */
     color: #131313;
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 150%;
     }
-<<<<<<< Updated upstream
+
     @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 150%;
-=======
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 150%;
->>>>>>> Stashed changes
     }
 }
 
@@ -405,7 +309,6 @@
     display: block;
     margin: auto;
     color: #131313;
-<<<<<<< Updated upstream
         
         font-style: normal;
         font-weight: 600;
@@ -414,7 +317,6 @@
         cursor: pointer;
     border-radius: 10px;
 }
-=======
 
     font-style: normal;
     font-weight: 600;
@@ -424,71 +326,56 @@
     border-radius: 10px;
 }
 
->>>>>>> Stashed changes
 .contacts__btn-locations {
     background-color: #F8D24E;
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
     color: #131313;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
     }
-<<<<<<< Updated upstream
     &:focus-visible {
         outline: none;
     }
-=======
 
     &:focus-visible {
         outline: none;
     }
 
->>>>>>> Stashed changes
     &:hover {
         background-color: #0A8817;
         color: #000000;
     }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     &:focus {
         background-color: #0A8817;
         color: #FFFFFF;
         fill: #FFFFFF;
     }
-<<<<<<< Updated upstream
         &:disabled,
         &[disabled] {
         background: #ABABAB;    
         }
-=======
 
     &:disabled,
     &[disabled] {
         background: #ABABAB;
     }
->>>>>>> Stashed changes
+
 }
 
 .contacts__btn-franchise {
     background-color: transparent;
     color: #000000;
     border: 2px solid #F8D24E;
-<<<<<<< Updated upstream
     &:focus-visible {
         outline: none;
     }
     &:hover {
     border: 2px solid #0A8817;
     }
-=======
 
     &:focus-visible {
         outline: none;
@@ -498,19 +385,15 @@
         border: 2px solid #0A8817;
     }
 
->>>>>>> Stashed changes
     &:focus {
         border: 2px solid #0A8817;
         color: #FFFFFF;
         fill: #FFFFFF;
-<<<<<<< Updated upstream
         
     }
-=======
 
     }
 
->>>>>>> Stashed changes
     &:disabled,
     &[disabled] {
         border: 2px solid #ABABAB;
@@ -524,14 +407,12 @@
         margin-top: 40px;
     }
 }
-<<<<<<< Updated upstream
 .contacts-btn__ithem {
     @media screen and (min-width: 768px) {
         display: inline-flex;
         
     }
 }
-=======
 
 .contacts-btn__ithem {
     @media screen and (min-width: 768px) {
@@ -540,7 +421,6 @@
     }
 }
 
->>>>>>> Stashed changes
 .contacts-btn__ithem--margin {
     @media screen and (min-width: 768px) {
         margin-right: 16px;
