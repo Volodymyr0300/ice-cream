@@ -2,11 +2,8 @@
 
 // UTILS STYLES
 @import './utils/variables';
-<<<<<<< Updated upstream
-@import './utils/visually-hidden';
-=======
->>>>>>> Stashed changes
 @import './utils/is-hidden';
+@import './utils/visually-hidden';
 
 // BASE STYLES
 @import './base/base';
@@ -14,7 +11,7 @@
 
 // COMPONENTS STYLES
 @import './components/container';
-@import './components/header';
+@import './components/header1';
 @import './components/hero';
 @import './components/products';
 @import './components/about';
