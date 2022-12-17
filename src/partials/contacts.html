@@ -1,3 +1,5 @@
+<!--contacts-->
+
 <section class="contacts__box">
     <div class="contacts__container">
 <h2 class="visually-hidden">our addresses</h2>
@@ -75,19 +77,45 @@
 </ul>
 <ul class="contacts-btn__list">
     <li class="contacts-btn__ithem contacts-btn__ithem--margin">
-        <button class="contacts__btn-locations contacts__btn" type="button">Our Locations
+        <button data-modal-open class="contacts__btn-locations contacts__btn" type="button">Our Locations
             <svg class="contacts-btn__svg">
-                <use href="../images/icons_sprite.svg#arrow_short"></use>
+                <use href="./images/icons_sprite.svg#arrow_short"></use>
             </svg>
         </button>
     </li>
     <li class="contacts-btn__ithem">
         <button class="contacts__btn-franchise contacts__btn" type="button">Franchise
             <svg class="contacts-btn__svg">
-                <use href="../images/icons_sprite.svg#arrow_short"></use>
+                <use href="./images/icons_sprite.svg#arrow_short"></use>
             </svg>
         </button>
     </li>
 </ul>
+    </div>
+    <!--modalka maps-->
+    <div class="contacts__backdrop is-hidden" data-modal>
+        <div class="contacts__modal">
+            <button data-modal-close class="contacts__modal-button">
+                <svg>
+                    <use href=""></use>
+                </svg>
+            </button>
+    
+            <p class="contacts__modal-subtitle">Our Locations</p>
+            <form action="">
+                <div class="contacts__modal-form__map">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="./images/contacts/tab-desk-madal-con@1x-min.png 1x, ./images/contacts/tab-desk-madal-con@2x-min.png 2x">
+                        <source media="(min-width: 480px)"
+                            srcset="./images/contacts/mob-modal-con@1x-min.png 1x, ./images/contacts/mob-modal-con@2x-min.png 2x">
+                        <img class="" src="./images/pro-modal/mob-modal-con@1x.png" alt="Maps" loading="lazy">
+                    </picture>
+                </div>
+                <a class="contacts__modal-form__link" href="https://goo.gl/maps/TcqYxsL41P1DLZJWA">
+                    <button class="contacts__button-submit" type="button">Open map</button>
+                </a>
+            </form>
+        </div>
     </div>
 </section>
