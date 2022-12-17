@@ -4,7 +4,7 @@
 
 
     // background-image:  linear-gradient(rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 1px, #84a178 50px, #84a178 100%);
-    background-color: var(--primary-color);
+    background-color: $primary-color;
 }
 
 .footer__container {
@@ -33,7 +33,7 @@
 
     line-height: 1.23;
     text-transform: uppercase;
-    color: var(--second-color);
+    color: $second-color;
     font-weight: 700;
 
 
@@ -64,7 +64,7 @@
     line-height: 1.22;
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--second-color);
+    color: $second-color;
 
     @media screen and (max-width: 767px) {
         width: 200px;
@@ -131,8 +131,8 @@
 
 .social-footer__link:hover,
 .social-footer__link:focus {
-    color: var(--second-color);
-    background-color: var(--accent-color)
+    color: $second-color;
+    background-color: $accent-color;
 }
 
 
