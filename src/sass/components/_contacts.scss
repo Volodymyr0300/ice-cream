@@ -38,14 +38,6 @@
                     rgba(255, 255, 255, .1) 128px,
                     #84A178 128px, #84A178 100%);
         }
-    
-    @media screen and (min-width: 1200px) {
-        padding-bottom: 120px;
-        background-image:
-            linear-gradient(rgba(255, 255, 255, .1) 0,
-                rgba(255, 255, 255, .1) 128px,
-                #84A178 128px, #84A178 100%);
-    }
 
 }
 
@@ -135,6 +127,7 @@
 .contacts__week {
     position: relative;
     margin-bottom: 48px;
+}
 
 .contacts__week {
     position: relative;
@@ -186,7 +179,6 @@
         font-size: 14px;
         line-height: 186%;
     }
-        @media screen and (min-width: 1200px) {
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 8px;
@@ -265,7 +257,6 @@
     line-height: 186%;
     }
 }
-.contacts__tel-mail {}
 
 .contacts__tel, .contacts__mail {
 
@@ -274,8 +265,6 @@
         line-height: 186%;
     }
 }
-
-.contacts__tel-mail {}
 
 .contacts__tel,
 .contacts__mail {
