@@ -1,6 +1,16 @@
-// width/padding variables
-$big-container: 1600px;
+//CSS variables
+:root {
+  --color--: color;
+  --fill--: fill;
+  --bgcolor--: background-color;
+  --bordercolor--: border-color;
+  --filter--: filter;
+  --transform--: transform;
+  --duration--: 250ms;
+  --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+// SASS variables break-points
 $min-mobile: 480px;
 $min-tablet: 768px;
 $min-desktop: 1200px;
@@ -8,11 +18,38 @@ $min-desktop: 1200px;
 $max-mobile: 767.98px;
 $max-tablet: 1199.98px;
 
-// $padding-container: 20px;
+//анімація item
+@keyframes item-jump {
+  0% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+  }
+}
+@keyframes item-rotate {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) rotate(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: perspective(400px) rotate(-90);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotate(180);
+  }
+  //підібрати час/метод/затримку
+}
 
 /* глобальні налаштування */
 body {
-  &.modal-open {
+  &.modal {
     overflow: hidden;
   }
 }
@@ -21,35 +58,13 @@ body {
   border: none;
   cursor: pointer;
 }
-
-/* контейнер  */
-// .container {
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0 20px;
-//   @media screen and (min-width: $min-mobile) {
-//     width: $min-mobile;
-//   }
-//   @media screen and (min-width: $min-tablet) {
-//     width: $min-tablet;
-//     padding: 0 32px;
-//   }
-//   @media screen and (min-width: $min-desktop) {
-//     width: $min-desktop;
-//     padding: 0 16px;
-//   }
-// }//.container
 /* спільна властивість секцій */
 .section {
   padding-bottom: 60px;
   padding-top: 60px;
 }
-/* скриває елемент */
-.visually-hidden {
-  position: fixed;
-  transform: scale(0);
-}
 
+//Секція products
 .products {
   & .section-subtitle {
     font-weight: 800;
@@ -238,6 +253,9 @@ body {
           background-image: url(../images/products/prod2_lg@2x.png); //desktop retina
         }
       }
+      // transform: rotate(360deg);
+      // opacity: 0;
+      // animation: item-jump 300ms ease-out 300ms 14 alternate-reverse forwards;
     } // &--ice-coffee::before
     &--milkshakes {
       position: relative;
@@ -314,4 +332,311 @@ body {
       bottom: 67px;
     }
   } //&__button
+
+  &__icon-close {
+    fill: #fff;
+    /* хрестик,коло stroke :/*var(--button-bg-color--);  */
+  }
 } //.products
+//Вікно modal products
+//mixin
+/*центрує блок всередині батька /можна зминити кут будови, що впливає на ефект  scale() */
+@mixin centeredAbsolute($x__abs: left, $y__abs: top) {
+  position: absolute;
+  $x__number: -50%;
+  $y__number: -50%;
+
+  @if $x__abs == left {
+    left: 50%;
+  } @else {
+    right: 50%;
+    $x__number: 50%;
+  }
+  @if $y__abs == top {
+    top: 50%;
+  } @else {
+    bottom: 50%;
+    $y__number: 50%;
+  }
+  transform: translate($x__number, $y__number) scale(1); /* 100%*/
+}
+//placeholders
+%is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+%fixed00-100 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+//Налаштування backdrop
+.backdrop {
+  @extend %fixed00-100;
+  overflow-y: scroll; /*щоб не скролився контент під ним*/
+  transition: opacity var(--duration--) var(--cubic--),
+    visibility var(--duration--) var(--cubic--);
+  // &.is-hidden {
+  //   @extend %is-hidden;
+  //   & .modal {
+  //     transform: scale(0.01);
+  //   }
+  // }
+}
+//Налаштування модалки
+.modal {
+  // @include centeredAbsolute($x__abs: right);
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  transform: translate(50%, 0%) scale(1);
+  width: 280px;
+  @media screen and (min-width: $min-tablet) {
+    width: 568px;
+  }
+  background: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  transition: var(--transform--) 1s var(--cubic--),
+    var(--transform--) 1s var(--cubic--);
+}
+/* кнопка закриття в модальному вікні */
+.button-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #fff;
+  display: block;
+  padding: 0;
+  //hover
+  &:focus,
+  &:hover .icon-close {
+    stroke: $accent-color;
+  }
+}
+
+.icon-close {
+  background-color: $second-color;
+  fill: $main-text-color;
+  @media screen and (min-width: $min-tablet) {
+    width: 24px;
+    height: 24px;
+  }
+  /* хрестик,коло stroke :/*var(--button-bg-color--);  */
+}
+//Верхня частина modal заголовок і картинка
+.products {
+  &__modal-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $min-tablet) {
+      flex-direction: row;
+      gap: 5px;
+    }
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    color: #131313;
+    text-align: center;
+    padding-top: 28px;
+    @media screen and (min-width: $min-tablet) {
+      padding-top: 32px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__modal-image {
+    margin: 0 auto;
+    width: 132px;
+    // height: 139px;
+    margin-bottom: 30px;
+  }
+} //.products
+//Chart(4 малюнки) в мадалці
+.products-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  @media screen and(min-width:$min-tablet) {
+    gap: 20px;
+  }
+
+  .chart__item {
+    width: 53px;
+    height: 72px;
+    @media screen and(min-width:$min-tablet) {
+      width: 65px;
+      height: 90px;
+    }
+    border: 2px solid #9cbe8f;
+    border-radius: 40px;
+  } //овал 53*72
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px auto;
+    width: 43px;
+    height: 43px;
+    @media screen and(min-width:$min-tablet) {
+      width: 53px;
+      height: 53px;
+    }
+
+    border-radius: 50%;
+    background: #9cbe8f;
+    border: 2px solid #9cbe8f;
+    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    margin-bottom: 8px;
+  } //круг 43*43
+  .ratio {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: calc(28 / 10);
+    color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .type {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: calc(12 / 10);
+    color: #131313;
+    // display: flex;
+    // align-items: center;
+    // margin: 0 auto;
+    text-align: center;
+  }
+} //products-chart end
+//Список інгридієнтів
+.products-ingredients {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+  color: #131313;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.ingr {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media screen and (min-width: $min-tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  &__item {
+    width: calc(100% - 2 * 20px);
+    margin: 0px;
+    padding: 0px;
+    @media screen and (min-width: $min-tablet) {
+      width: calc(100% - 2 * 40px);
+    }
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 176%;
+    letter-spacing: 0.04em;
+    color: #131313;
+    display: flex;
+    align-items: baseline;
+  }
+  &--space {
+    flex-grow: 10;
+  }
+} //ingr end
+//Форма в модалці
+.form {
+  &__list {
+    padding-top: 40px;
+    @media screen and (min-width: $min-tablet) {
+      padding-top: 48px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 24px;
+    @media screen and (min-width: $min-tablet) {
+      padding-bottom: 32px;
+    }
+  }
+
+  /*.form__input*/
+  &__input {
+    display: block;
+    width: 240px;
+    padding: 11px 10px;
+    // padding: 11px auto 11px 10px;
+    @media screen and (min-width: $min-tablet) {
+      width: 368px;
+      padding: 11px 16px;
+    }
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 140%;
+    color: #131313;
+    outline: none;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84a178;
+    border-radius: 10px;
+    // transition: var(--bordercolor--) var(--duration--) var(--cubic--);
+
+    /*.form__input--textarea*/
+    &--textarea {
+      resize: none;
+      padding: 12px 16px;
+    }
+    /*.form__input--placeholder*/
+    &::placeholder {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+}
+/* кнопка відправлення форми */
+.submit__button--center {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 12px 34px;
+  background: #f8d24e;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  color: #131313;
+}
