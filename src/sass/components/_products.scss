@@ -1,4 +1,4 @@
-//CSS variables
+//CSS variablesrgba(10, 136, 23, 0.25)
 :root {
   --color--: color;
   --fill--: fill;
@@ -17,6 +17,14 @@ $min-desktop: 1200px;
 
 $max-mobile: 767.98px;
 $max-tablet: 1199.98px;
+
+$ice-cream-color: #aec6a5;
+$ice-coffee-color: #efd478;
+$milkshakes-color:#d6936d;
+$chart-color: #9cbe8f;
+$chart-shadow-color: rgba(10, 136, 23, 0.25)
+$placeholder-color:  rgba(117, 117, 117, 0.5)
+
 
 //анімація item
 @keyframes item-jump {
@@ -86,8 +94,8 @@ body {
 
   & .section-title {
     font-family: 'Seymour One', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    // font-style: normal;
+    // font-weight: 400;
     font-size: 30px;
     line-height: calc(38 / 30);
     text-align: center;
@@ -136,17 +144,17 @@ body {
       height: 719px;
     }
     &--ice-cream {
-      background-color: #aec6a5;
+      background-color:$ice-cream-color;
     }
     &--ice-coffee {
-      background-color: #efd478;
+      background-color:$ice-coffee-color;
     }
     &--milkshakes {
-      background-color: #d6936d;
+      background-color:$milkshakes-color;
     }
   } //&__item
   &__title {
-    position: relative;
+    // position: relative;
     text-align: center;
     text-transform: uppercase;
     padding-top: 123px;
@@ -160,19 +168,16 @@ body {
     @media screen and (min-width: $min-desktop) {
       margin-bottom: 66px;
     }
-    &--ice-cream {
-      position: relative;
-    }
-    &--ice-cream:before {
-      content: '';
+    %products-before{
+     content: '';
       position: absolute;
+      display: block;
       width: 200px;
       height: 211px;
       @media screen and (min-width: $min-desktop) {
         width: 302px;
         height: 318px;
       }
-      display: block;
       border-radius: 50%;
       background-color: inherit;
       top: 50%;
@@ -180,6 +185,13 @@ body {
       transform: translate(-50%, -81%);
       background-size: contain;
       background-repeat: no-repeat;
+    }
+    
+    &--ice-cream {
+      position: relative;
+    }
+    &--ice-cream:before {
+      @extend %products-before;
       background-image: url(../images/products/prod1_sm@1x.png);
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
@@ -211,22 +223,7 @@ body {
       position: relative;
     }
     &--ice-coffee:before {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 211px;
-      @media screen and (min-width: $min-desktop) {
-        width: 302px;
-        height: 318px;
-      }
-      display: block;
-      border-radius: 50%;
-      background-color: inherit;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -81%);
-      background-size: contain;
-      background-repeat: no-repeat;
+      @extend %products-before;
       background-image: url(../images/products/prod2_sm@1x.png);
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
@@ -261,22 +258,7 @@ body {
       position: relative;
     }
     &--milkshakes:before {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 211px;
-      @media screen and (min-width: $min-desktop) {
-        width: 302px;
-        height: 318px;
-      }
-      display: block;
-      border-radius: 50%;
-      background-color: inherit;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -81%);
-      background-size: contain;
-      background-repeat: no-repeat;
+      @extend %products-before;
       background-image: url(../images/products/prod3_sm@1x.png);
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
@@ -333,39 +315,19 @@ body {
     }
   } //&__button
 
-  &__icon-close {
-    fill: #fff;
-    /* хрестик,коло stroke :/*var(--button-bg-color--);  */
-  }
+  // &__icon-cross {
+  //   fill: #fff;
+  //   /* хрестик,коло stroke :/*var(--button-bg-color--);  */
+  // }
 } //.products
 //Вікно modal products
-//mixin
-/*центрує блок всередині батька /можна зминити кут будови, що впливає на ефект  scale() */
-@mixin centeredAbsolute($x__abs: left, $y__abs: top) {
-  position: absolute;
-  $x__number: -50%;
-  $y__number: -50%;
 
-  @if $x__abs == left {
-    left: 50%;
-  } @else {
-    right: 50%;
-    $x__number: 50%;
-  }
-  @if $y__abs == top {
-    top: 50%;
-  } @else {
-    bottom: 50%;
-    $y__number: 50%;
-  }
-  transform: translate($x__number, $y__number) scale(1); /* 100%*/
-}
 //placeholders
-%is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
+// %is-hidden {
+//   visibility: hidden;
+//   opacity: 0;
+//   pointer-events: none;
+// }
 %fixed00-100 {
   position: fixed;
   top: 0;
@@ -381,12 +343,12 @@ body {
   overflow-y: scroll; /*щоб не скролився контент під ним*/
   transition: opacity var(--duration--) var(--cubic--),
     visibility var(--duration--) var(--cubic--);
-  // &.is-hidden {
-  //   @extend %is-hidden;
-  //   & .modal {
-  //     transform: scale(0.01);
-  //   }
-  // }
+  &.is-hidden {
+    // @extend %is-hidden;
+    & .modal {
+      transform: scale(0.01);
+    }
+  }
 }
 //Налаштування модалки
 .modal {
@@ -399,8 +361,8 @@ body {
   @media screen and (min-width: $min-tablet) {
     width: 568px;
   }
-  background: #fcfcfc;
-  border: 2px solid #f8d24e;
+  background: $second-color;
+  border: 2px solid $accent-color;
   border-radius: 10px;
   transition: var(--transform--) 1s var(--cubic--),
     var(--transform--) 1s var(--cubic--);
@@ -415,12 +377,12 @@ body {
   padding: 0;
   //hover
   &:focus,
-  &:hover .icon-close {
+  &:hover .icon-cross {
     stroke: $accent-color;
   }
 }
 
-.icon-close {
+.icon-cross {
   background-color: $second-color;
   fill: $main-text-color;
   @media screen and (min-width: $min-tablet) {
@@ -441,11 +403,11 @@ body {
       gap: 5px;
     }
     font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
+    // font-style: normal;
+    // font-weight: 400;
     font-size: 20px;
     line-height: calc(28 / 20);
-    color: #131313;
+    color:$main-text-color;
     text-align: center;
     padding-top: 28px;
     @media screen and (min-width: $min-tablet) {
@@ -480,7 +442,7 @@ body {
       width: 65px;
       height: 90px;
     }
-    border: 2px solid #9cbe8f;
+    border: 2px solid  $chart-color;
     border-radius: 40px;
   } //овал 53*72
 
@@ -495,34 +457,25 @@ body {
       width: 53px;
       height: 53px;
     }
-
     border-radius: 50%;
-    background: #9cbe8f;
-    border: 2px solid #9cbe8f;
-    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    background: $chart-color;
+    border: 2px solid $chart-color;
+    box-shadow: 0px 6px 20px $chart-shadow-color;
     margin-bottom: 8px;
   } //круг 43*43
   .ratio {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 10px;
     line-height: calc(28 / 10);
-    color: #131313;
+    color: $main-text-color;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .type {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 10px;
     line-height: calc(12 / 10);
-    color: #131313;
-    // display: flex;
-    // align-items: center;
-    // margin: 0 auto;
+    color:$main-text-color;
     text-align: center;
   }
 } //products-chart end
@@ -531,7 +484,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(28 / 20);
-  color: #131313;
+  color: $main-text-color;
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -559,13 +512,10 @@ body {
     @media screen and (min-width: $min-tablet) {
       width: calc(100% - 2 * 40px);
     }
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 176%;
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $main-text-color;
     display: flex;
     align-items: baseline;
   }
@@ -601,13 +551,12 @@ body {
       width: 368px;
       padding: 11px 16px;
     }
-    font-family: 'Montserrat';
     font-size: 14px;
     line-height: 140%;
-    color: #131313;
+    color: $main-text-color;
     outline: none;
     background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84a178;
+    border: 1px solid $primary-color;
     border-radius: 10px;
     // transition: var(--bordercolor--) var(--duration--) var(--cubic--);
 
@@ -621,7 +570,7 @@ body {
       font-size: 12px;
       line-height: calc(14 / 12);
       letter-spacing: 0.01em;
-      color: rgba(117, 117, 117, 0.5);
+      color:$placeholder-color;
     }
   }
 }
@@ -631,12 +580,10 @@ body {
   margin: 0 auto;
   margin-bottom: 40px;
   padding: 12px 34px;
-  background: #f8d24e;
+  background:$accent-color;
   border-radius: 10px;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
-  color: #131313;
+  color: $main-text-color;
 }
