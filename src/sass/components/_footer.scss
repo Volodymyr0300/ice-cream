@@ -1,0 +1,231 @@
+.footer {
+    // background-image: linear-gradient(to top,var(--primary-color) 20%, rgba(47, 48, 58, 0) 80%),
+    //         url(../images/backgroud_desktop@1x.jpg);
+
+
+    // background-image:  linear-gradient(rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 1px, #84a178 50px, #84a178 100%);
+    background-color: var(--primary-color);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+        // align-items: center;
+        flex-direction: column;
+        // margin-left: auto;
+        // margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+    flex-direction: unset;
+    align-items: center;
+    }
+       
+
+
+}
+
+.footer__text {
+    margin-bottom: 60px;
+
+}
+
+.footer__description {
+
+    line-height: 1.23;
+    text-transform: uppercase;
+    color: var(--second-color);
+    font-weight: 700;
+
+
+        @media screen and (max-width: 767px) {
+        width: 234px;
+        font-size: 18px;
+    }
+
+        @media screen and (min-width: 768px) {
+            width: 352px; 
+            font-size: 26px; 
+            letter-spacing: 0.04em;   
+        }
+
+        
+
+        @media screen and (min-width: 1200px) {
+                width: 504px;
+                font-weight: 400;
+                font-size: 30px;
+            }
+
+        
+}
+
+.footer__description--size {
+
+    line-height: 1.22;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--second-color);
+
+    @media screen and (max-width: 767px) {
+        width: 200px;
+        font-size: 34px;
+        letter-spacing: 0.04em;   
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 352px;
+        font-size: 48px;
+        letter-spacing: 0.06em;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        width: 500px;
+        font-size: 58px;
+        }
+    
+    
+}
+
+.footer__info {
+    // display: flex;
+    // margin-left: auto;
+    margin-bottom: 60px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: end;
+
+        @media screen and (max-width: 767px) {
+                gap: 20px;
+                margin-bottom: 20px;
+
+            }
+    
+
+        @media screen and (min-width: 768px) {
+                gap: 30px;
+                margin-bottom: 34px;
+            }
+
+    @media screen and (min-width: 1200px) {
+        gap: 30px;
+        margin-top: 18px;
+        margin-bottom: 40px;
+    }
+
+    
+}
+
+.footer__social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: block;
+    fill: currentColor;
+    border-radius: 50%;
+}
+
+.social-footer__link:hover,
+.social-footer__link:focus {
+    color: var(--second-color);
+    background-color: var(--accent-color)
+}
+
+
+// .footer__contacts {
+//     display: flex;
+//     justify-content: end;
+
+// }
+
+.footer__contacts {
+    display: flex;
+    justify-content: end;
+    
+    font-weight: 700;
+    line-height: 186%;
+    // color: black;
+   
+
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
+        
+        
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            font-size: 16px;
+            letter-spacing: 0.02em;
+        }
+}
+
+.footer__contacts-text {
+    color: black;
+    margin-right: 5px;
+    
+}
+
+.footer__contacts-text--tel {
+color: #fff;
+text-decoration: none;
+
+}
+
+.footer__bottom {
+    border-top: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 1200px) {
+
+        width: 1167px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+.footer__bottom--text{
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #7A7A7A;
+    
+
+    @media screen and (max-width: 767px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 175px;
+        
+            
+
+                
+                    
+                    line-height: 152%;
+                    
+                    
+        
+    }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+           
+            line-height: 186%;
+            letter-spacing: 0.02em;
+        }
+
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 12px;
+        }
+}
