@@ -44,3 +44,61 @@
      
     
     </div>
+<!-- modaal window -->
+<div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <form>
+              <div role="group" class="form__group">
+                <div class="form__list">
+                  <div class="form__field">
+                    <label for="name" class="form__label">
+                      <input
+                        type="text"
+                        id="name"
+                        class="form__input"
+                        required
+                        minlength="7"
+                        placeholder="Name"
+                        pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                        title="Input 2 words with a space."
+                      />
+                    </label>
+                  </div>
+                  <div class="form__field">
+                    <label for="tel" class="form__label">
+                      <input
+                        type="tel"
+                        id="tel"
+                        class="form__input"
+                        required
+                        placeholder="Phone"
+                      />
+                    </label>
+                  </div>
+                  <div class="form__field">
+                    <label for="comment" class="form__label">
+                      <textarea
+                        id="comment"
+                        class="form_input form_input--textaria"
+                        rows="3"
+                        required
+                        placeholder="Comment"
+                      ></textarea>
+                    </label>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="submit_button submit_button--center btn"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+            <button data-modal-close class="button-close btn">
+              <svg class="icon-close" width="20" height="20">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
