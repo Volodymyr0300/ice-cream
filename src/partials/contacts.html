@@ -1,0 +1,121 @@
+<!--contacts-->
+
+<section class="contacts__box">
+    <div class="contacts__container">
+<h2 class="visually-hidden">our addresses</h2>
+<ul class="contacts__list">
+    <li class="contacts__ithem">
+        <address class="contacts__address">
+            <h3 class="contacts__title">CAFE</h3>
+            <div class="contacts__location ">
+                <p class="contacts__location--text">Chicago</p>
+                <a class="contacts__location--link" href="https://goo.gl/maps/6xaKA1vausbiutiz7">10340 Ridgeland Ave,
+                    Chicago Ridge, IL 60415, USA</a>
+            </div>
+            <div class="contacts__week contacts__before contacts__after">
+                <div class="contacts__week--working">
+                    <p class="contacts__week--working--days">Monday - Friday</p>
+                    <p class="contacts__week--working--time">06:00 AM - 10:00 PM</p>
+                </div>
+                <div class="contacts__week--weekend-days">
+                    <p class="contacts__week--working--days">Saturday - Sunday</p>
+                    <p class="contacts__week--working--time">08:00 AM - 16:00 PM</p>
+                </div>
+            </div>
+            <div class="contacts__tel-mail ">
+                <a class="contacts__tel" href="">+61(0) 383 766 284</a>
+                <a class="contacts__mail" href="">noreply@envato.com</a>
+            </div>
+        </address>
+    </li><li class="contacts__ithem">
+        <address class="contacts__address">
+            <h3 class="contacts__title">FOODTRUCK</h3>
+            <div class="contacts__location">
+                <p class="contacts__location--text">Los Angeles</p>
+                <a class="contacts__location--link" href="https://goo.gl/maps/cRb3GLhxoBmZFLSu8">1003 Manhattan Ave,
+                    Manhattan Beach, CA 90263, USA</a>
+            </div>
+            <div class="contacts__week contacts__before contacts__after">
+                <div class="contacts__week--working">
+                    <p class="contacts__week--working--days">Monday - Friday</p>
+                    <p class="contacts__week--working--time">06:00 AM - 10:00 PM</p>
+                </div>
+                <div class="contacts__week--weekend-days">
+                    <p class="contacts__week--working--days">Saturday - Sunday</p>
+                    <p class="contacts__week--working--time">08:00 AM - 16:00 PM</p>
+                </div>
+            </div>
+            <div class="contacts__tel-mail">
+                <a class="contacts__tel" href="">+61(0) 383 766 284</a>
+                <a class="contacts__mail" href="">noreply@envato.com</a>
+            </div>
+        </address>
+    </li><li class="contacts__ithem">
+        <address class="contacts__address">
+            <h3 class="contacts__title">CAFE</h3>
+            <div class="contacts__location">
+                <p class="contacts__location--text">New York</p>
+                <a class="contacts__location--link" href="https://goo.gl/maps/p7npJ5B77T1rhPsR6">726 Sterling Pl,
+                    Brooklyn, NY 11222, USA</a>
+            </div>
+            <div class="contacts__week contacts__before contacts__after">
+                <div class="contacts__week--working">
+                    <p class="contacts__week--working--days">Monday - Friday</p>
+                    <p class="contacts__week--working--time">06:00 AM - 10:00 PM</p>
+                </div>
+                <div class="contacts__week--weekend-days">
+                    <p class="contacts__week--working--days">Saturday - Sunday</p>
+                    <p class="contacts__week--working--time">08:00 AM - 16:00 PM</p>
+                </div>
+            </div>
+            <div class="contacts__tel-mail">
+                <a class="contacts__tel" href="">+61(0) 383 766 284</a>
+                <a class="contacts__mail" href="">noreply@envato.com</a>
+            </div>
+        </address>
+    </li>
+</ul>
+<ul class="contacts-btn__list">
+    <li class="contacts-btn__ithem contacts-btn__ithem--margin">
+        <button data-modal-open class="contacts__btn-locations contacts__btn" type="button">Our Locations
+            <svg class="contacts-btn__svg">
+                <use href="./images/icons_sprite.svg#arrow_short"></use>
+            </svg>
+        </button>
+    </li>
+    <li class="contacts-btn__ithem">
+        <button class="contacts__btn-franchise contacts__btn" type="button">Franchise
+            <svg class="contacts-btn__svg">
+                <use href="./images/icons_sprite.svg#arrow_short"></use>
+            </svg>
+        </button>
+    </li>
+</ul>
+    </div>
+    <!--modalka maps-->
+    <div class="contacts__backdrop is-hidden" data-modal>
+        <div class="contacts__modal">
+            <button data-modal-close class="contacts__modal-button">
+                <svg>
+                    <use href=""></use>
+                </svg>
+            </button>
+    
+            <p class="contacts__modal-subtitle">Our Locations</p>
+            <form action="">
+                <div class="contacts__modal-form__map">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="./images/contacts/tab-desk-madal-con@1x-min.png 1x, ./images/contacts/tab-desk-madal-con@2x-min.png 2x">
+                        <source media="(min-width: 480px)"
+                            srcset="./images/contacts/mob-modal-con@1x-min.png 1x, ./images/contacts/mob-modal-con@2x-min.png 2x">
+                        <img class="" src="./images/pro-modal/mob-modal-con@1x.png" alt="Maps" loading="lazy">
+                    </picture>
+                </div>
+                <a class="contacts__modal-form__link" href="https://goo.gl/maps/TcqYxsL41P1DLZJWA">
+                    <button class="contacts__button-submit" type="button">Open map</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
