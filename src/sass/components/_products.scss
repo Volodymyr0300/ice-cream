@@ -396,6 +396,7 @@ body {
   &.overlay.active {
     opacity: 1;
     visibility: visible;
+    transition: opacity 1s $cubic, visibility 1s $cubic;
   }
   &.modal.active {
     opacity: 1;
