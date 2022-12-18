@@ -1,5 +1,5 @@
 .about {
-  background-color: var(--primary-color);
+  background-color: $primary-color;
   @media screen and (min-width: 480px) {
     padding-bottom: 50px;
   }
@@ -17,7 +17,7 @@
   line-height: 1.22; /* 22px/18 122.222222%*/
   text-align: center;
   text-transform: uppercase;
-  color: var(--second-color);
+  color: $second-color;
   padding-top: 61px;
   margin-bottom: 12px;
   @media screen and (min-width: 768px) {
@@ -41,7 +41,7 @@
   letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
-  color: var(--second-color);
+  color: $second-color;
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     font-size: 34px;
@@ -135,7 +135,7 @@
 .about__text {
   font-weight: 400;
   font-size: 12px;
-  color: var(--second-color);
+  color: $second-color;
   @media screen and (min-width: 480px) {
     text-align: center;
     &:first-child {
@@ -173,7 +173,7 @@
   }
 }
 .about__btn {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   border-radius: 10px;
   display: block;
   padding: 0;
@@ -189,10 +189,10 @@
   line-height: 1.29; /* 18px/14 128.571429%*/
   &:hover,
   &:focus {
-    background-color: #0a8817;
+    background-color: $btn-hover;
   }
   &:disabled {
-    background-color: #ababab;
+    background-color: $btn-disable;
   }
   @media screen and (min-width: 768px) {
     margin-top: 32px;
@@ -206,15 +206,15 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29; /* 18px/14 128.571429%*/
-  color: var(--main-text-color);
+  color: $main-text-color;
   margin-right: 7px;
   .about__btn:focus & {
-    color: var(--second-color);
+    color: $second-color;
   }
 }
 .about__btn-svg {
   .about__btn:focus & {
-    fill: var(--second-color);
+    fill: $second-color;
   }
 }
 .overlay {
@@ -249,8 +249,8 @@
     padding: 32px 60px;
   }
   border-radius: 10px;
-  border: 2px solid var(--accent-color);
-  background-color: var(--second-color);
+  border: 2px solid $accent-color;
+  background-color: $second-color;
 }
 
 .modal.active,
@@ -281,7 +281,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:focus {
-    fill: var(--second-color);
+    fill: $second-color;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: cornflowerblue;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -302,7 +302,7 @@
   }
 }
 .about__modal-iframe {
-  background-color: var(--main-text-color);
+  background-color: $main-text-color;
   border-radius: 10px;
   width: 224px;
   height: 199px;
