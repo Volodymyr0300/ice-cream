@@ -1,16 +1,14 @@
-//CSS variables
-:root {
-  --color--: color;
-  --fill--: fill;
-  --bgcolor--: background-color;
-  --bordercolor--: border-color;
-  --filter--: filter;
-  --transform--: transform;
-  --duration--: 250ms;
-  --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
-}
+//SASS variables
+$color: color;
+$fill: fill;
+$bgcolor: background-color;
+$bordercolor: border-color;
+$filter: filter;
+$transform: transform;
+$duration: 250ms;
+$cubic--: cubic-bezier(0.4, 0, 0.2, 1);
 
-// SASS variables break-points
+// break-points
 $min-mobile: 480px;
 $min-tablet: 768px;
 $min-desktop: 1200px;
@@ -340,8 +338,7 @@ body {
 .backdrop {
   @extend %fixed00-100;
   overflow-y: scroll; /*щоб не скролився контент під ним*/
-  transition: opacity var(--duration--) var(--cubic--),
-    visibility var(--duration--) var(--cubic--);
+  transition: opacity $duration $cubic, visibility $duration $cubic;
   &.is-hidden {
     // @extend %is-hidden;
     & .modal {
@@ -363,8 +360,7 @@ body {
   background: $second-color;
   border: 2px solid $accent-color;
   border-radius: 10px;
-  transition: var(--transform--) 1s var(--cubic--),
-    var(--transform--) 1s var(--cubic--);
+  transition: $transform 1s $cubic, $transform 1s $cubic;
 }
 /* кнопка закриття в модальному вікні */
 .button-close {
@@ -557,7 +553,7 @@ body {
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid $primary-color;
     border-radius: 10px;
-    // transition: var(--bordercolor--) var(--duration--) var(--cubic--);
+    // transition: var(--bordercolor--) $duration $cubic;
 
     /*.form__input--textarea*/
     &--textarea {
