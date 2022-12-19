@@ -1,16 +1,67 @@
 <!-- Hero -->
-<section>
-    <h1>ice cream
-        made with
-        passion</h1>
-        <ul>
-            <li>
-                <button type="button">
-                    <a href="">Products</a>
-                </button>
+<section class="hero hero__container">
+    <div class="hero__title-info">
+        <h1 class="hero__title">ice cream
+          made with
+          passion</h1>
+          <ul class="hero__info-list">
+            <li class="hero__info-item">
+              <p class="hero__item-number">16</p>
+              <p class="hero__item-text">cafes</p>
             </li>
-            <li>
-                <a href="">How it’s made?</a>
+            <li class="hero__info-item">
+              <p class="hero__item-number">23</p>
+              <p class="hero__item-text">food trucks</p>
             </li>
-        </ul>
+          </ul>
+      </div>
+      <ul class="hero__list">
+        <li class="hero__item">
+          <a class="hero__button" href="#products">Products</a>
+        </li>
+        <li class="hero__item">
+            <a class="hero__link" href="#about">How it’s made?</a>
+        </li>
+    </ul>
+    <picture>
+        <source
+        media="(min-width:1200px)"
+        srcset="./images/hero/many-icecream@1x_desktop.png 1x, ./images/hero/many-icecream@2x_desktop.png 2x "
+        />
+        <source
+        media="(min-width:768px)"
+        srcset="./images/hero/many-icecream@1x_tablet.png 1x, ./images/hero/many-icecream@2x_tablet.png 2x "
+        />
+        <img
+        class="hero__image"
+        src="./images/hero/many-icecream@1x_tablet.png"
+        alt="many icecream"
+      loading="lazy"
+     />
+     <div class="hero__text-icon">
+        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+      <svg width="40" height="16" class="hero__icon">
+        <use href="./images/icons_sprite.svg#arrow_long">
+      </svg>
+      </div>
+      <picture>
+        <source
+        media="(min-width:1200px)"
+        srcset="./images/hero/desktop@1x_desktop.png 1x, ./images/hero/desktop@2x_desktop.png 2x "
+        />
+        <source
+        media="(min-width:768px)"
+        srcset="./images/hero/tablet@1x_tablet.png 1x, ./images/hero/tablet@2x_tablet.png 2x "
+        />
+        <source
+        media="(max-width:767px)"
+        srcset="./images/hero/mobile@1x_mobile.png 1x, ./images/hero/mobile@2x_mobile.png 2x "
+        />
+        <img
+        class="hero__image-balls"
+      src="./images/hero/mobile@1x_mobile.png"
+      alt="icecream"
+      loading="lazy"
+     />
+      </picture>
 </section>
