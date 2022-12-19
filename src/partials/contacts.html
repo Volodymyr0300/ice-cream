@@ -107,13 +107,12 @@
                         </picture>
                     </div>
                     <a class="contacts__modal-form__link" href="https://goo.gl/maps/iX5VnxNTtXTyP7vB9">
-                        <button class="contacts__button-submit" type="button">Open map</button>
+                        <button class="contacts__button-submit contacts__button-submit--locations" type="button">Open map</button>
                     </a>
                 </form>
                 
             </div>
             <div class="overlay js-overlay-modal"></div>
-        
         <!--modal 1 finish-->
 
     </li>
@@ -132,7 +131,28 @@
                 <svg class="modal__cross js-modal-close">
                     <use href="./images/about/symbol-defs.svg#icon-modal-cross"></use>
                 </svg>
-            
+                <h3 class="contacts__modal-subtitle">Thank you for your interest in owning an Ice Cream shop</h3>
+                <p class="contacts__modal-title">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once
+                the application process resumes, we will contact you for further information. Please fill out the contact information
+                below and we will reach out for additional information. We appreciate your patience.</p>
+
+                <form class="modal-form" action="">
+                    <div>
+                        <label for="">
+                            <input class="contacts__form-input" type="text" required minlength="2" placeholder="Name">
+                        </label>
+                        <label for="">
+                            <input class="contacts__form-input" type="tel" required minlength="10" maxlength="12" placeholder="Phone">
+                        </label>
+                        <label for="">
+                            <input class="contacts__form-input" type="email" required placeholder="Email">
+                        </label>
+                        <label for="">
+                            <textarea class="contacts__form-massage" name="user_message" cols="" rows="4" placeholder="Comment"></textarea>
+                        </label>
+                    </div>
+                    <button class="contacts__button-submit--franchise contacts__button-submit" type="submit">Submit</button>
+                </form>
             </div>
             <div class="overlay js-overlay-modal"></div>
         <!--modal 2 finish-->
