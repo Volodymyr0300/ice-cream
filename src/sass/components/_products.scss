@@ -88,12 +88,12 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 }
 
 /* глобальні налаштування */
-body {
-  .products.modal {
-    // height: 100vh;
-    overflow-y: hidden;
-  }
-}
+//body {
+// .products.modal {
+//   // height: 100vh;
+//   // overflow-y: hidden;
+// }
+//}
 /*загальне налаштування для кнопок */
 .btn {
   border: none;
@@ -199,7 +199,6 @@ body {
     left: 50%;
     width: 200px;
     height: 211px;
-    // border-radius: 50%;
     background-color: inherit;
     transform: translate(-50%, -81%);
     background-size: contain;
@@ -209,11 +208,11 @@ body {
       height: 318px;
     }
   }
-  :before {
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -81%);
-  }
+  //:before {
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -81%);
+  //}
   &__title {
     // position: relative;
     text-align: center;
@@ -386,6 +385,9 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   // opacity: 1;
+}
+body {
+  overflow-y: scroll;
 }
 // //Налаштування backdrop
 // .backdrop {
