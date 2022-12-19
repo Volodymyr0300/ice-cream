@@ -14,7 +14,7 @@
 
 .contacts__box {
     padding-bottom: 60px;
-    max-width: 1600px;
+    width: 100%;
     background-image: 
     linear-gradient(rgba(255, 255, 255, .1) 0,
     rgba(255, 255, 255, .1) 353px,
@@ -440,7 +440,7 @@
 .contacts__button-submit--locations {
     width: 134px;
     @media screen and (min-width:768px) {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 1.21;
             width: 145px;
         }
@@ -449,7 +449,7 @@
 .contacts__button-submit--franchise {
     width: 114px;
     @media screen and (min-width:768px) {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 1.21;
             width: 121px;
         }
@@ -475,6 +475,17 @@
     line-height: 140%;
     color: #131313;
     margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 140%;
+    }
+}
+
+.contacts__form-group {
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        margin: 0 auto;
+    }
 }
 
 .contacts__form-input:focus-visible {
@@ -490,12 +501,17 @@
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid #84A178;
     border-radius: 10px;
-
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
     color: #131313;
     padding: 8px 12px 7px 12px;
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        height: 42px;
+        font-size: 14px;
+        
+    }
 }
 
 .contacts__form-massage {
@@ -513,6 +529,11 @@
     resize: none;
     margin-bottom: 24px;
     padding: 8px 12px 39px 12px;
+    @media screen and (min-width: 768px) {
+            width: 368px;
+            height: 84px;
+            font-size: 14px;
+        }
 }
 
 .contacts__form-massage:focus-visible {
