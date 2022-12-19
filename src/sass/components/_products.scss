@@ -24,8 +24,8 @@ $chart-shadow-color: rgba(10, 136, 23, 0.25);
 $placeholder-color: rgba(117, 117, 117, 0.5);
 
 /*центрує блок всередині батька /можна зминити кут будови, що впливає на ефект  scale() */
-@mixin centeredAbsolute($x__abs: left, $y__abs: top) {
-  position: absolute;
+@mixin centeredFixed($x__abs: left, $y__abs: top) {
+  position: fixed;
   $x__number: -50%;
   $y__number: -50%;
 
@@ -401,7 +401,7 @@ body {
     @media screen and (min-width: $min-tablet) {
       width: 568px;
     }
-    @include centeredAbsolute();
+    @include centeredFixed();
     transition: $transform 1s $cubic, $transform 1s $cubic;
     // transition: all 1s $cubic;
   }
