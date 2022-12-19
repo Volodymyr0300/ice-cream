@@ -77,18 +77,65 @@
 </ul>
 <ul class="contacts-btn__list">
     <li class="contacts-btn__ithem contacts-btn__ithem--margin">
-        <button data-modal-open class="contacts__btn-locations contacts__btn" type="button">Our Locations
+        <button 
+        class="contacts__btn-locations contacts__btn js-open-modal" 
+        data-modal="contacts-locations__data-modal" 
+        type="button">Our Locations
             <svg class="contacts-btn__svg">
                 <use href="./images/icons_sprite.svg#arrow_short"></use>
             </svg>
         </button>
+        <!--modal 1 start-->
+            <div class="modal" 
+            data-modal="contacts-locations__data-modal">
+            <svg class="modal__cross js-modal-close">
+                <use href="./images/about/symbol-defs.svg#icon-modal-cross"></use>
+            </svg>
+            
+                <p class="contacts__modal-subtitle">Our Locations</p>
+                <form action="">
+                    <div class="contacts__modal-form__map">
+                        <picture>
+                            <source media="(min-width: 768px)" 
+                            srcset="./images/contacts/tab-desk-madal-con@1x-min.png 1x, ./images/contacts/tab-desk-madal-con@2x-min.png 2x">
+                            <source media="(min-width: 480px)" 
+                            srcset="./images/contacts/mob-modal-con@1x-min.png 1x, ./images/contacts/mob-modal-con@2x-min.png 2x">
+                            <img 
+                            class=""
+                            src="./images/contacts/mob-modal-con@1x.png" 
+                            alt="map">
+                        </picture>
+                    </div>
+                    <a class="contacts__modal-form__link" href="https://goo.gl/maps/iX5VnxNTtXTyP7vB9">
+                        <button class="contacts__button-submit" type="button">Open map</button>
+                    </a>
+                </form>
+                
+            </div>
+            <div class="overlay js-overlay-modal"></div>
+        
+        <!--modal 1 finish-->
+
     </li>
     <li class="contacts-btn__ithem">
-        <button class="contacts__btn-franchise contacts__btn" type="button">Franchise
+        <button 
+        data-modal="contacts-franchise__data-modal" 
+        class="contacts__btn-franchise contacts__btn js-open-modal" 
+        type="button">Franchise
             <svg class="contacts-btn__svg">
                 <use href="./images/icons_sprite.svg#arrow_short"></use>
             </svg>
         </button>
+        <!--modal 2 start-->
+            <div class="modal" 
+            data-modal="contacts-franchise__data-modal">
+                <svg class="modal__cross js-modal-close">
+                    <use href="./images/about/symbol-defs.svg#icon-modal-cross"></use>
+                </svg>
+            
+            </div>
+            <div class="overlay js-overlay-modal"></div>
+        <!--modal 2 finish-->
     </li>
 </ul>
     </div>
