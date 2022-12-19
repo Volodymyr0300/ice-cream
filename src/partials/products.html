@@ -9,7 +9,11 @@
           Soft ice cream with a delicate taste. Made with milk, cream, sugar and
           natural stabilizer
         </p>
-        <button type="button" class="products__button" data-modal-open>
+        <button
+          type="button"
+          class="products__button js-open-modal"
+          data-modal="icecream"
+        >
           <svg class="products__icon" width="41" height="16">
             <use href="./images/icons_sprite.svg#arrow_long"></use>
           </svg>
@@ -23,7 +27,11 @@
           Fragrant invigorating drink created from 100% natural ingredients
           without the use of preservatives and flavor enhancers
         </p>
-        <button type="button" class="products__button" data-modal-open>
+        <button
+          type="button"
+          class="products__button js-open-modal"
+          data-modal="icecoffee"
+        >
           <svg class="products__icon" width="41" height="16">
             <use href="./images/icons_sprite.svg#arrow_long"></use>
           </svg>
@@ -37,140 +45,382 @@
           Sweet drinks based on milk and ice cream, supplemented with syrups,
           fruits, berries and other sweets of your choice
         </p>
-        <button type="button" class="products__button" data-modal-open>
+        <button
+          type="button"
+          class="products__button js-open-modal"
+          data-modal="milkshakes"
+        >
           <svg class="products__icon" width="41" height="16">
             <use href="./images/icons_sprite.svg#arrow_long"></use>
           </svg>
         </button>
       </li>
     </ul>
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <h2 class="products__modal-title">Chololate <span></span> icecream</h2>
-        <picture>
-          <source
-            media="(min-width:768px)"
-            srcset="
-              ./images/products/img0_md@1x.png 1x,
-              ./images/products/img0_md@2x.png 2x
-            "
-            type="image/jpg"
-          />
-          <source
-            media="(min-width:480px)"
-            srcset="
-              ./images/products/img0_sm@1x.png 1x,
-              ./images/products/img0_sm@2x.png 2x
-            "
-            type="image/jpg"
-          />
-          <img
-            class="products__modal-image"
-            src="./images/products/img0_sm@1x.png"
-            alt="Chololate icecream"
-            loading="lazy"
-          />
-        </picture>
-        <ul class="products-chart list">
-          <li class="chart__item">
-            <div class="circle">
-              <p class="ratio">320</p>
-            </div>
-            <p class="type">Kcal</p>
-          </li>
-          <li class="chart__item">
-            <div class="circle">
-              <p class="ratio">4g</p>
-            </div>
-            <p class="type">Protein</p>
-          </li>
-          <li class="chart__item">
-            <div class="circle">
-              <p class="ratio">8.2g</p>
-            </div>
-            <p class="type">Fats</p>
-          </li>
-          <li class="chart__item">
-            <div class="circle">
-              <p class="ratio">40.4g</p>
-            </div>
-            <p class="type">Carbs</p>
-          </li>
-        </ul>
-        <h3 class="products-ingredients">Ingredients</h3>
-        <ul class="ingr__list list">
-          <li class="ingr__item">Milk<span class="ingr--space"></span>100ml</li>
-          <li class="ingr__item">
-            Belgian chocolate<span class="ingr--space"></span>20g
-          </li>
-          <li class="ingr__item">
-            Cream<span class="ingr--space"></span>150ml
-          </li>
-          <li class="ingr__item">
-            Cocoa powder<span class="ingr--space"></span>30g
-          </li>
-          <li class="ingr__item">Sugar<span class="ingr--space"></span>40g</li>
-          <li class="ingr__item">
-            Vanilla sugar<span class="ingr--space"></span>10g
-          </li>
-        </ul>
-        <form class="form">
-          <div role="group" class="form__group">
-            <div class="form__list">
-              <div class="form__field">
-                <label for="name" class="form__label">
-                  <input
-                    type="text"
-                    id="name"
-                    class="form__input"
-                    required
-                    minlength="7"
-                    placeholder="Name"
-                    pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-                    title="Input 2 words with a space."
-                  />
-                </label>
-              </div>
-              <div class="form__field">
-                <label for="tel" class="form__label">
-                  <input
-                    type="tel"
-                    id="tel"
-                    class="form__input"
-                    required
-                    placeholder="Phone"
-                  />
-                </label>
-              </div>
-              <div class="form__field">
-                <label for="comment" class="form__label">
-                  <textarea
-                    id="comment"
-                    class="form__input form__input--textaria"
-                    rows="3"
-                    required
-                    placeholder="Comment"
-                  ></textarea>
-                </label>
-              </div>
-            </div>
-            <button
-              type="submit"
-              class="submit__button submit__button--center btn"
-            >
-              Submit
-            </button>
+    <div class="products modal" data-modal="icecream">
+      <h2 class="products__modal-title">Chololate <span></span> icecream</h2>
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="
+            ./images/products/img0_md@1x.png 1x,
+            ./images/products/img0_md@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(min-width:480px)"
+          srcset="
+            ./images/products/img0_sm@1x.png 1x,
+            ./images/products/img0_sm@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="products__modal-image"
+          src="./images/products/img0_sm@1x.png"
+          alt="Chololate icecream"
+          loading="lazy"
+        />
+      </picture>
+      <ul class="products-chart list">
+        <li class="chart__item icecream">
+          <div class="circle icecream">
+            <p class="ratio">320</p>
           </div>
-        </form>
-        <button data-modal-close class="button-close btn">
-          <svg class="icon-cross" width="20" height="20">
-            <use href="./images/icons_sprite.svg#btn_close-black"></use>
-          </svg>
-        </button>
-      </div>
-      <!--modal-end-->
+          <p class="type">Kcal</p>
+        </li>
+        <li class="chart__item icecream">
+          <div class="circle icecream">
+            <p class="ratio">4g</p>
+          </div>
+          <p class="type">Protein</p>
+        </li>
+        <li class="chart__item icecream">
+          <div class="circle icecream">
+            <p class="ratio">8.2g</p>
+          </div>
+          <p class="type">Fats</p>
+        </li>
+        <li class="chart__item icecream">
+          <div class="circle icecream">
+            <p class="ratio">40.4g</p>
+          </div>
+          <p class="type">Carbs</p>
+        </li>
+      </ul>
+      <h3 class="products-ingredients">Ingredients</h3>
+      <ul class="ingr__list list">
+        <li class="ingr__item">Milk<span class="ingr--space"></span>100ml</li>
+        <li class="ingr__item">
+          Belgian chocolate<span class="ingr--space"></span>20g
+        </li>
+        <li class="ingr__item">Cream<span class="ingr--space"></span>150ml</li>
+        <li class="ingr__item">
+          Cocoa powder<span class="ingr--space"></span>30g
+        </li>
+        <li class="ingr__item">Sugar<span class="ingr--space"></span>40g</li>
+        <li class="ingr__item">
+          Vanilla sugar<span class="ingr--space"></span>10g
+        </li>
+      </ul>
+      <form class="form">
+        <div role="group" class="form__group">
+          <div class="form__list">
+            <div class="form__field">
+              <label for="name" class="form__label">
+                <input
+                  c
+                  type="text"
+                  id="name"
+                  class="form__input icecream"
+                  required
+                  minlength="7"
+                  placeholder="Name"
+                  pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                  title="Input 2 words with a space."
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="tel" class="form__label">
+                <input
+                  type="tel"
+                  id="tel"
+                  class="form__input"
+                  required
+                  placeholder="Phone"
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="comment" class="form__label">
+                <textarea
+                  id="comment"
+                  class="form__input form__input--textaria"
+                  rows="3"
+                  required
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="submit__button submit__button--center btn"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <button class="button-close btn js-modal-close">
+        <svg class="icon-cross" width="20" height="20">
+          <use href="./images/icons_sprite.svg#btn_close-black"></use>
+        </svg>
+      </button>
     </div>
-    <!--backdrop-end-->
+    <div class="products modal" data-modal="icecoffee">
+      <h2 class="products__modal-title">Chololate <span></span> icecoffee</h2>
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="
+            ./images/products/prod2_md@1x.png 1x,
+            ./images/products/prod2_md@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(min-width:480px)"
+          srcset="
+            ./images/products/prod2_sm@1x.png 1x,
+            ./images/products/prod2_sm@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="products__modal-image"
+          src="./images/products/prod2_sm@1x.png"
+          alt="Chololate icecoffee"
+          loading="lazy"
+        />
+      </picture>
+      <ul class="products-chart list">
+        <li class="chart__item icecoffee">
+          <div class="circle icecoffee">
+            <p class="ratio">320</p>
+          </div>
+          <p class="type">Kcal</p>
+        </li>
+        <li class="chart__item icecoffee">
+          <div class="circle icecoffee">
+            <p class="ratio">4g</p>
+          </div>
+          <p class="type">Protein</p>
+        </li>
+        <li class="chart__item icecoffee">
+          <div class="circle icecoffee">
+            <p class="ratio">8.2g</p>
+          </div>
+          <p class="type">Fats</p>
+        </li>
+        <li class="chart__item icecoffee">
+          <div class="circle icecoffee">
+            <p class="ratio">40.4g</p>
+          </div>
+          <p class="type">Carbs</p>
+        </li>
+      </ul>
+      <h3 class="products-ingredients">Ingredients</h3>
+      <ul class="ingr__list list">
+        <li class="ingr__item">Milk<span class="ingr--space"></span>100ml</li>
+        <li class="ingr__item">
+          Belgian chocolate<span class="ingr--space"></span>20g
+        </li>
+        <li class="ingr__item">Cream<span class="ingr--space"></span>150ml</li>
+        <li class="ingr__item">
+          Cocoa powder<span class="ingr--space"></span>30g
+        </li>
+        <li class="ingr__item">Sugar<span class="ingr--space"></span>40g</li>
+        <li class="ingr__item">
+          Vanilla sugar<span class="ingr--space"></span>10g
+        </li>
+      </ul>
+      <form class="form">
+        <div role="group" class="form__group">
+          <div class="form__list">
+            <div class="form__field">
+              <label for="name" class="form__label">
+                <input
+                  type="text"
+                  id="name"
+                  class="form__input icecoffee"
+                  required
+                  minlength="7"
+                  placeholder="Name"
+                  pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                  title="Input 2 words with a space."
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="tel" class="form__label">
+                <input
+                  type="tel"
+                  id="tel"
+                  class="form__input icecoffee"
+                  required
+                  placeholder="Phone"
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="comment" class="form__label">
+                <textarea
+                  id="comment"
+                  class="form__input icecoffee form__input--textaria"
+                  rows="3"
+                  required
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="submit__button submit__button--center btn"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <button class="button-close btn js-modal-close">
+        <svg class="icon-cross" width="20" height="20">
+          <use href="./images/icons_sprite.svg#btn_close-black"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="products modal" data-modal="milkshakes">
+      <h2 class="products__modal-title">Chololate <span></span> milkshake</h2>
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="
+            ./images/products/prod3_md@1x.png 1x,
+            ./images/products/prod3_md@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(min-width:480px)"
+          srcset="
+            ./images/products/prod3_sm@1x.png 1x,
+            ./images/products/prod3_sm@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="products__modal-image"
+          src="./images/products/prod3_sm@1x.png"
+          alt="Chololate milkshake"
+          loading="lazy"
+        />
+      </picture>
+      <ul class="products-chart list">
+        <li class="chart__item milkshakes">
+          <div class="circle milkshakes">
+            <p class="ratio">320</p>
+          </div>
+          <p class="type">Kcal</p>
+        </li>
+        <li class="chart__item milkshakes">
+          <div class="circle milkshakes">
+            <p class="ratio">4g</p>
+          </div>
+          <p class="type">Protein</p>
+        </li>
+        <li class="chart__item milkshakes">
+          <div class="circle milkshakes">
+            <p class="ratio">8.2g</p>
+          </div>
+          <p class="type">Fats</p>
+        </li>
+        <li class="chart__item milkshakes">
+          <div class="circle milkshakes">
+            <p class="ratio">40.4g</p>
+          </div>
+          <p class="type">Carbs</p>
+        </li>
+      </ul>
+      <h3 class="products-ingredients">Ingredients</h3>
+      <ul class="ingr__list list">
+        <li class="ingr__item">Milk<span class="ingr--space"></span>100ml</li>
+        <li class="ingr__item">
+          Belgian chocolate<span class="ingr--space"></span>20g
+        </li>
+        <li class="ingr__item">Cream<span class="ingr--space"></span>150ml</li>
+        <li class="ingr__item">
+          Cocoa powder<span class="ingr--space"></span>30g
+        </li>
+        <li class="ingr__item">Sugar<span class="ingr--space"></span>40g</li>
+        <li class="ingr__item">
+          Vanilla sugar<span class="ingr--space"></span>10g
+        </li>
+      </ul>
+      <form class="form">
+        <div role="group" class="form__group">
+          <div class="form__list">
+            <div class="form__field">
+              <label for="name" class="form__label">
+                <input
+                  type="text"
+                  id="name"
+                  class="form__input milkshakes"
+                  required
+                  minlength="7"
+                  placeholder="Name"
+                  pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                  title="Input 2 words with a space."
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="tel" class="form__label">
+                <input
+                  type="tel"
+                  id="tel"
+                  class="form__input milkshakes"
+                  required
+                  placeholder="Phone"
+                />
+              </label>
+            </div>
+            <div class="form__field">
+              <label for="comment" class="form__label">
+                <textarea
+                  id="comment"
+                  class="form__input form__input--textaria milkshakes"
+                  rows="3"
+                  required
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="submit__button submit__button--center btn"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <button class="button-close btn js-modal-close">
+        <svg class="icon-cross" width="20" height="20">
+          <use href="./images/icons_sprite.svg#btn_close-black"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="products overlay js-overlay-modal"></div>
   </div>
-  <!--__container-end-->
+  <!--__container-->
 </section>

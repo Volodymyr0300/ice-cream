@@ -1,16 +1,14 @@
-//CSS variables
-:root {
-  --color--: color;
-  --fill--: fill;
-  --bgcolor--: background-color;
-  --bordercolor--: border-color;
-  --filter--: filter;
-  --transform--: transform;
-  --duration--: 250ms;
-  --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
-}
+//SASS variables
+$color: color;
+$fill: fill;
+$bgcolor: background-color;
+$bordercolor: border-color;
+$filter: filter;
+$transform: transform;
+$duration: 250ms;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
 
-// SASS variables break-points
+// break-points
 $min-mobile: 480px;
 $min-tablet: 768px;
 $min-desktop: 1200px;
@@ -24,6 +22,27 @@ $milkshakes-color: #d6936d;
 $chart-color: #9cbe8f;
 $chart-shadow-color: rgba(10, 136, 23, 0.25);
 $placeholder-color: rgba(117, 117, 117, 0.5);
+
+/*центрує блок всередині батька /можна зминити кут будови, що впливає на ефект  scale() */
+@mixin centeredFixed($x__abs: left, $y__abs: top) {
+  position: fixed;
+  $x__number: -50%;
+  $y__number: -50%;
+
+  @if $x__abs == left {
+    left: 50%;
+  } @else {
+    right: 50%;
+    $x__number: 50%;
+  }
+  @if $y__abs == top {
+    top: 50%;
+  } @else {
+    bottom: 50%;
+    $y__number: 50%;
+  }
+  transform: translate($x__number, $y__number) scale(1); /* 100%*/
+}
 
 //анімація item
 @keyframes item-jump {
@@ -56,8 +75,9 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 
 /* глобальні налаштування */
 body {
-  &.modal {
-    overflow: hidden;
+  .products.modal {
+    // height: 100vh;
+    overflow-y: hidden;
   }
 }
 /*загальне налаштування для кнопок */
@@ -132,8 +152,12 @@ body {
     position: relative;
     width: 280px;
     height: 420px;
-    margin-bottom: 168px;
     border-radius: 24px;
+    @media screen and (max-width: $max-mobile) {
+      &:not(:last-child) {
+        margin-bottom: 168px;
+      }
+    }
     @media screen and (min-width: $min-tablet) {
       width: 224px;
       height: 428px;
@@ -152,6 +176,24 @@ body {
       background-color: $milkshakes-color;
     }
   } //&__item
+  %products-before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 211px;
+    // border-radius: 50%;
+    background-color: inherit;
+    transform: translate(-50%, -81%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media screen and (min-width: $min-desktop) {
+      width: 302px;
+      height: 318px;
+    }
+  }
   &__title {
     // position: relative;
     text-align: center;
@@ -167,30 +209,13 @@ body {
     @media screen and (min-width: $min-desktop) {
       margin-bottom: 66px;
     }
-    %products-before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 200px;
-      height: 211px;
-      @media screen and (min-width: $min-desktop) {
-        width: 302px;
-        height: 318px;
-      }
-      border-radius: 50%;
-      background-color: inherit;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -81%);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
 
     &--ice-cream {
       position: relative;
     }
     &--ice-cream:before {
       @extend %products-before;
+
       background-image: url(../images/products/prod1_sm@1x.png);
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
@@ -285,7 +310,7 @@ body {
         }
       }
     } // &--milkshakes::before
-  } //&__title
+  }
   &__text {
     text-align: center;
     padding: 0 40px;
@@ -318,15 +343,9 @@ body {
   //   fill:  #817C7C;
   //   /* хрестик,коло stroke :/*var(--button-bg-color--);  */
   // }
-} //.products
+} //products
 //Вікно modal products
-
-//placeholders
-// %is-hidden {
-//   visibility: hidden;
-//   opacity: 0;
-//   pointer-events: none;
-// }
+//placeholder позиціонування overlay
 %fixed00-100 {
   position: fixed;
   top: 0;
@@ -334,37 +353,58 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  opacity: 1;
+  // opacity: 1;
 }
-//Налаштування backdrop
-.backdrop {
+// //Налаштування backdrop
+// .backdrop {
+//   @extend %fixed00-100;
+//   overflow-y: scroll; /*щоб не скролився контент під ним*/
+//   transition: opacity $duration $cubic, visibility $duration $cubic;
+//   &.is-hidden {
+//     // @extend %is-hidden;
+//     & .modal {
+//       transform: scale(0.01);
+//     }
+//   }
+// }
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
   @extend %fixed00-100;
-  overflow-y: scroll; /*щоб не скролився контент під ним*/
-  transition: opacity var(--duration--) var(--cubic--),
-    visibility var(--duration--) var(--cubic--);
-  &.is-hidden {
-    // @extend %is-hidden;
-    & .modal {
-      transform: scale(0.01);
-    }
-  }
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
 }
+
 //Налаштування модалки
-.modal {
-  // @include centeredAbsolute($x__abs: right);
-  position: absolute;
-  top: 10px;
-  right: 50%;
-  transform: translate(50%, 0%) scale(1);
-  width: 280px;
-  @media screen and (min-width: $min-tablet) {
-    width: 568px;
+.products {
+  &.modal {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 30; /* Должен быть выше чем у подложки*/
+    transform: scale(0.01);
+
+    background: $second-color;
+    border: 2px solid $accent-color;
+    border-radius: 10px;
   }
-  background: $second-color;
-  border: 2px solid $accent-color;
-  border-radius: 10px;
-  transition: var(--transform--) 1s var(--cubic--),
-    var(--transform--) 1s var(--cubic--);
+  &.overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s $cubic, visibility 1s $cubic;
+  }
+  &.modal.active {
+    opacity: 1;
+    visibility: visible;
+    width: 280px;
+    @media screen and (min-width: $min-tablet) {
+      width: 568px;
+    }
+    @include centeredFixed();
+    transition: $transform 1s $cubic, $transform 1s $cubic;
+    // transition: all 1s $cubic;
+  }
 }
 /* кнопка закриття в модальному вікні */
 .button-close {
@@ -433,51 +473,71 @@ body {
   @media screen and(min-width:$min-tablet) {
     gap: 20px;
   }
+} //products-chart
 
-  .chart__item {
+.chart__item {
+  width: 53px;
+  height: 72px;
+  @media screen and(min-width:$min-tablet) {
+    width: 65px;
+    height: 90px;
+  }
+  border: 2px solid $chart-color;
+  &.icecoffee {
+    border: 2px solid $ice-coffee-color;
+  }
+  &.milkshakes {
+    border: 2px solid $milkshakes-color;
+  }
+  border-radius: 40px;
+} //item овал 53*72
+
+// .modal[data-modal="2"] .chart__item {
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2px auto;
+  width: 43px;
+  height: 43px;
+  @media screen and(min-width:$min-tablet) {
     width: 53px;
-    height: 72px;
-    @media screen and(min-width:$min-tablet) {
-      width: 65px;
-      height: 90px;
-    }
-    border: 2px solid $chart-color;
-    border-radius: 40px;
-  } //овал 53*72
+    height: 53px;
+  }
+  border-radius: 50%;
+  background: $chart-color;
+  border: 2px solid $chart-color;
+  &.icecoffee {
+    background: $ice-coffee-color;
+    border: 2px solid $ice-coffee-color;
+    box-shadow: 0px 6px 20px rgba(239, 212, 120, 0.25);
+  }
+  &.milkshakes {
+    background: $milkshakes-color;
+    border: 2px solid $milkshakes-color;
+    box-shadow: 0px 6px 20px rgba(214, 147, 109, 0.25);
+  }
+  box-shadow: 0px 6px 20px $chart-shadow-color;
+  margin-bottom: 8px;
+} //круг 43*43
 
-  .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -2px auto;
-    width: 43px;
-    height: 43px;
-    @media screen and(min-width:$min-tablet) {
-      width: 53px;
-      height: 53px;
-    }
-    border-radius: 50%;
-    background: $chart-color;
-    border: 2px solid $chart-color;
-    box-shadow: 0px 6px 20px $chart-shadow-color;
-    margin-bottom: 8px;
-  } //круг 43*43
-  .ratio {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: calc(28 / 10);
-    color: $main-text-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .type {
-    font-size: 10px;
-    line-height: calc(12 / 10);
-    color: $main-text-color;
-    text-align: center;
-  }
-} //products-chart end
+.ratio {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: calc(28 / 10);
+  color: $main-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.type {
+  font-size: 10px;
+  line-height: calc(12 / 10);
+  color: $main-text-color;
+  text-align: center;
+}
+// } //products-chart end
 //Список інгридієнтів
 .products-ingredients {
   font-weight: 500;
@@ -492,6 +552,7 @@ body {
 }
 .ingr {
   &__list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -556,8 +617,14 @@ body {
     outline: none;
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid $primary-color;
+    &.icecoffee {
+      border: 1px solid $ice-coffee-color;
+    }
+    &.milkshakes {
+      border: 1px solid $milkshakes-color;
+    }
     border-radius: 10px;
-    // transition: var(--bordercolor--) var(--duration--) var(--cubic--);
+    // transition: var(--bordercolor--) $duration $cubic;
 
     /*.form__input--textarea*/
     &--textarea {

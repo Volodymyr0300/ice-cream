@@ -1,3 +1,11 @@
+.swiper{
+  margin-bottom: 40px;
+}
+.reviews {
+  margin-bottom: 20px;
+  
+
+}
 .reviews__img--item {
   display: block;
   border-radius: 50%;
@@ -5,8 +13,7 @@
   margin-right: auto;
   width: 85px;
   height: 85px;
-  margin-top: 40px;
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .reviews__text--box {
@@ -42,6 +49,7 @@
 
 .reviews__name {
   margin-top: 32px;
+  margin-bottom: 32px;
   font-style: Medium;
   font-weight: 500;
   font-size: 20px;
@@ -52,7 +60,27 @@
 
 @media screen and (min-width: 768px) {
   .reviews__name {
+    margin-bottom: 52px;
     font-size: 16px;
     line-height: calc(30 / 16);
   }
+}
+.swiper-pagination-bullet {
+  margin-top: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 9px;
+}
+
+.swiper-pagination-bullet-active{
+background: #84A178;
+}
+
+.swiper-pagination{
+  margin-top: 10px;
 }
