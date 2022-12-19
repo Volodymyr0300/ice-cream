@@ -178,21 +178,21 @@ body {
   } //&__item
   %products-before {
     content: '';
-    position: absolute;
     display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 200px;
     height: 211px;
+    // border-radius: 50%;
+    background-color: inherit;
+    transform: translate(-50%, -81%);
+    background-size: contain;
+    background-repeat: no-repeat;
     @media screen and (min-width: $min-desktop) {
       width: 302px;
       height: 318px;
     }
-    border-radius: 50%;
-    background-color: inherit;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -81%);
-    background-size: contain;
-    background-repeat: no-repeat;
   }
   &__title {
     // position: relative;
