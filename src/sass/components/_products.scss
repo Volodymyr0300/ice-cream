@@ -75,7 +75,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 
 /* глобальні налаштування */
 body {
-  .modal {
+  .products.modal {
     // height: 100vh;
     overflow-y: hidden;
   }
@@ -552,6 +552,7 @@ body {
 }
 .ingr {
   &__list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
