@@ -47,30 +47,44 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 //анімація item
 @keyframes item-jump {
   0% {
-    opacity: 0.5;
     transform: perspective(400px) translateY(-10px);
+  }
+  50% {
+    transform: perspective(400px) translateY(0);
   }
 
   100% {
-    opacity: 1;
-    transform: perspective(400px) translateY(0);
+    transform: perspective(400px) translateY(-10px);
   }
 }
 @keyframes item-rotate {
   0% {
-    opacity: 0.3;
-    transform: perspective(400px) rotate(0);
+    transform: perspective(400px) rotate(0deg);
   }
   50% {
-    opacity: 0.7;
-    transform: perspective(400px) rotate(-90);
+    transform: perspective(400px) rotate(-90deg);
   }
 
   100% {
-    opacity: 1;
-    transform: perspective(400px) rotate(180);
+    transform: perspective(400px) rotate(180deg);
   }
   //підібрати час/метод/затримку
+}
+@keyframes item-scale {
+  0% {
+    // opacity: 0.3;
+    transform: perspective(400px) scale(1);
+  }
+  50% {
+    // opacity: 0.7;
+    transform: perspective(400px) scale(1.5);
+  }
+
+  100% {
+    // opacity: 1;
+    transform: perspective(400px) scale(1);
+  }
+  //підібрати час/метод таймінгу/затримку/к-ть повторів
 }
 
 /* глобальні налаштування */
@@ -175,6 +189,7 @@ body {
     &--milkshakes {
       background-color: $milkshakes-color;
     }
+    animation: item-jump 1s $cubic 5;
   } //&__item
   %products-before {
     content: '';
@@ -193,6 +208,11 @@ body {
       width: 302px;
       height: 318px;
     }
+  }
+  :before {
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -81%);
   }
   &__title {
     // position: relative;
@@ -320,6 +340,11 @@ body {
     @media screen and (min-width: $min-desktop) {
       padding: 0 64px;
     }
+    transition: $transform 5s $cubic;
+    &:focus,
+    &:hover {
+      transform: scale(1.5);
+    }
   } //&__text
   &__button {
     position: absolute;
@@ -330,7 +355,7 @@ body {
     transform: translate(-50%, -50%);
     fill: currentColor;
     background-color: inherit;
-
+    cursor: pointer;
     @media screen and (min-width: $min-tablet) {
       bottom: 20px;
     }
@@ -339,6 +364,13 @@ body {
     }
   } //&__button
 
+  &__icon {
+    transition: $transform 500ms $cubic;
+    &:focus,
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
   // &__icon-cross {
   //   fill:  #817C7C;
   //   /* хрестик,коло stroke :/*var(--button-bg-color--);  */
@@ -458,10 +490,16 @@ body {
     margin-bottom: 20px;
   }
   &__modal-image {
+    display: block;
     margin: 0 auto;
     width: 132px;
     // height: 139px;
     margin-bottom: 30px;
+    transition: $transform $duration $cubic;
+    &:hover,
+    &:focus {
+      transform: scale(2);
+    }
   }
 } //.products
 //Chart(4 малюнки) в мадалці
@@ -472,6 +510,11 @@ body {
   gap: 9px;
   @media screen and(min-width:$min-tablet) {
     gap: 20px;
+  }
+  transition: $transform 1s $cubic;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
   }
 } //products-chart
 
@@ -490,6 +533,8 @@ body {
     border: 2px solid $milkshakes-color;
   }
   border-radius: 40px;
+
+  animation: item-scale 5000ms ease-in-out;
 } //item овал 53*72
 
 // .modal[data-modal="2"] .chart__item {
@@ -566,12 +611,12 @@ body {
     }
   }
   &__item {
-    width: calc(100% - 2 * 20px);
+    width: calc(100%); // - 2 * 20px
     margin: 0px;
     padding: 0px;
-    @media screen and (min-width: $min-tablet) {
-      width: calc(100% - 2 * 40px);
-    }
+    // @media screen and (min-width: $min-tablet) {
+    //   width: calc(100% - 2 * 40px); //
+    // }
     font-size: 14px;
     line-height: 176%;
     letter-spacing: 0.04em;
