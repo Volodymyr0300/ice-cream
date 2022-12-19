@@ -1,0 +1,126 @@
+.advantages--section {
+  background-color: $primary-color;
+  // TABLET
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0px;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 80px;
+  }
+}
+.advantages__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px 0 16px;
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    height: 225px;
+  }
+}
+.advantages--list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-bottom: 32px;
+  // MOBILE
+  @media screen and (min-width: 480px) {
+    flex-direction: column;
+  }
+  // TABLET
+  @media screen and (min-width: 768px) {
+    padding-bottom: 60px;
+    gap: 80px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    gap: 32px;
+    flex-direction: row;
+  }
+}
+.advantages--block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // TABLET
+  @media screen and (min-width: 768px) {
+    width: 152px;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    width: auto;
+  }
+}
+.advantages--svg {
+  padding: 7px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: $accent-color;
+}
+.advantages--number {
+  color: $second-color;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 22px;
+  // MOBILE
+  @media screen and (min-width: 480px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  // TABLET
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    font-size: 48px;
+    letter-spacing: 0.04em;
+    line-height: 1.22;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    margin-top: 40px;
+    font-size: 58px;
+    line-height: 1.22;
+  }
+}
+.advantages--txt {
+  color: $second-color;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 170%;
+  text-align: center;
+  width: 230px;
+  margin-top: 16px;
+  // MOBILE
+  @media screen and (min-width: 480px) {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+  }
+  // TABLET
+  @media screen and (min-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+    width: 152px;
+    margin-top: 12px;
+  }
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 176%;
+    letter-spacing: 0.02em;
+    width: 368px;
+    margin-top: 12px;
+  }
+}
