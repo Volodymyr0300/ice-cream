@@ -53,12 +53,25 @@
     width: auto;
   }
 }
-.advantages--svg {
-  padding: 7px;
-  border-radius: 25px;
+.weight_svg::before {
+  background-image: url(../images/advantages/frame.svg);
+  margin: 0 auto 40px auto;
+}
+.cow_svg::before {
+  background-image: url(../images/advantages/cow.svg);
+  margin: 0 auto 40px auto;
+}
+.icecrema_svg::before {
+  background-image: url(../images/advantages/icecrema.svg);
+  margin: 0 auto 40px auto;
+}
+.advantages--number::before {
+  display: block;
+  content: '';
   width: 50px;
   height: 50px;
-  background-color: $accent-color;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .advantages--number {
   color: $second-color;
