@@ -14,29 +14,29 @@
 
 .contacts__box {
     padding-bottom: 60px;
-    max-width: 1600px;
+    width: 100%;
     background-image: 
     linear-gradient(rgba(255, 255, 255, .1) 0,
     rgba(255, 255, 255, .1) 353px,
-    #84A178 353px, #84A178 100%);
+    $primary-color 353px, $primary-color 100%);
     background-image:
         linear-gradient(rgba(255, 255, 255, .1) 0,
             rgba(255, 255, 255, .1) 353px,
-            #84A178 353px, #84A178 100%);
+            $primary-color 353px, $primary-color 100%);
 
     @media screen and (min-width: 768px) {
         padding-bottom: 40px;
         background-image:
         linear-gradient(rgba(255, 255, 255, .1) 0,
         rgba(255, 255, 255, .1) 299px,
-        #84A178 299px, #84A178 100%);
+        $primary-color 299px, $primary-color 100%);
     }
     @media screen and (min-width: 1200px) {
         padding-bottom: 120px;
             background-image:
                 linear-gradient(rgba(255, 255, 255, .1) 0,
                     rgba(255, 255, 255, .1) 128px,
-                    #84A178 128px, #84A178 100%);
+                    $primary-color 128px, $primary-color 100%);
         }
 
 }
@@ -82,7 +82,7 @@
 .contacts__ithem {
     width: 280px;
     height: 412px;
-    background: #FCFCFC;
+    background: $second-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     padding: 40px 32px 24px 32px;
@@ -141,9 +141,9 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $main-text-color;
     padding: 4px 22px;
-    background: #F8D24E;
+    background: $accent-color;
     border-radius: 4px;
     margin-bottom: 20px;
     @media screen and (min-width: 768px) {
@@ -161,11 +161,11 @@
     line-height: 186%;
         /* or 22px */    
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $main-text-color;
     margin-bottom: 8px;
     /* or 22px */
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $main-text-color;
     margin-bottom: 8px;
     @media screen and (min-width: 768px) {
         margin-bottom: 12px;
@@ -214,7 +214,7 @@
     font-size: 12px;
     line-height: 186%;
     /* or 22px */
-    color: #131313;
+    color: $main-text-color;
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 186%;
@@ -238,7 +238,7 @@
     font-size: 12px;
     line-height: 186%;
     /* or 22px */
-    color: #ABABAB;
+    color: $btn-disable;
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 186%;
@@ -264,7 +264,7 @@
     font-size: 12px;
     line-height: 160%;
     /* or 19px */
-    color: #131313;
+    color: $main-text-color;
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 150%;
@@ -285,7 +285,7 @@
     height: 42px;
     display: block;
     margin: auto;
-    color: #131313;
+    color: $main-text-color;
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -301,11 +301,11 @@
 }
 
 .contacts__btn-locations {
-    background-color: #F8D24E;
+    background-color: $accent-color;
     border: none;
     margin-top: 20px;
     margin-bottom: 16px;
-    color: #131313;
+    color: $main-text-color;
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -319,23 +319,23 @@
     }
 
     &:hover {
-        background-color: #0A8817;
+        background-color: $btn-hover;
         color: #000000;
     }
 
     &:focus {
-        background-color: #0A8817;
+        background-color: $btn-hover;
         color: #FFFFFF;
         fill: #FFFFFF;
     }
         &:disabled,
         &[disabled] {
-        background: #ABABAB;    
+        background: $btn-disable;    
         }
 
     &:disabled,
     &[disabled] {
-        background: #ABABAB;
+        background: $btn-disable;
     }
 
 }
@@ -343,28 +343,28 @@
 .contacts__btn-franchise {
     background-color: transparent;
     color: #000000;
-    border: 2px solid #F8D24E;
+    border: 2px solid $accent-color;
     &:focus-visible {
         outline: none;
     }
     &:hover {
-    border: 2px solid #0A8817;
+    border: 2px solid $btn-hover;
     }
     &:focus-visible {
         outline: none;
     }
     &:hover {
-        border: 2px solid #0A8817;
+        border: 2px solid $btn-hover;
     }
     &:focus {
-        border: 2px solid #0A8817;
+        border: 2px solid $btn-hover;
         color: #FFFFFF;
         fill: #FFFFFF;
         
     }
     &:disabled,
     &[disabled] {
-        border: 2px solid #ABABAB;
+        border: 2px solid $btn-disable;
     }
 }
 
@@ -403,46 +403,7 @@
 
 /*початок модалки*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* modalka*/
+/* modalka 1*/
 
 .contacts__modal-subtitle {
     font-family: 'Seymour One';
@@ -450,7 +411,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #131313;
+    color: $main-text-color;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -460,27 +421,38 @@
         }
 }
 
-
 .contacts__button-submit {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.25;
-    color: #131313;
-    width: 114px;
-    height: 42px;
-    background: #F8D24E;
+    color: $main-text-color;
+    background: $accent-color;
     border-radius: 10px;
     border: none;
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    height: 42px;
+}
+
+.contacts__button-submit--locations {
+    width: 134px;
     @media screen and (min-width:768px) {
-        font-size: 17px;
-        line-height: 1.21;
-        width: 145px;
-    }
+            font-size: 14px;
+            line-height: 1.21;
+            width: 145px;
+        }
+}
+
+.contacts__button-submit--franchise {
+    width: 114px;
+    @media screen and (min-width:768px) {
+            font-size: 14px;
+            line-height: 1.21;
+            width: 121px;
+        }
 }
 
 .contacts__modal-form__map {
@@ -489,7 +461,82 @@
     
 }
 
-
 .contacts__modal-form__link {
     text-decoration: none;
 }
+
+/* modalka 2*/
+
+.contacts__modal-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $main-text-color;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 140%;
+    }
+}
+
+.contacts__form-group {
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        margin: 0 auto;
+    }
+}
+
+.contacts__form-input:focus-visible {
+    outline: none;
+}
+
+.contacts__form-input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    width: 224px;
+    height: 32px;
+    margin-bottom: 12px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: $main-text-color;
+    padding: 8px 12px 7px 12px;
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        height: 42px;
+        font-size: 14px;
+        
+    }
+}
+
+.contacts__form-massage {
+    font-family: 'Montserrat';
+    font-style: normal;
+    width: 224px;
+    height: 64px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: $main-text-color;
+    resize: none;
+    margin-bottom: 24px;
+    padding: 8px 12px 39px 12px;
+    @media screen and (min-width: 768px) {
+            width: 368px;
+            height: 84px;
+            font-size: 14px;
+        }
+}
+
+.contacts__form-massage:focus-visible {
+    outline: none;
+}
+
