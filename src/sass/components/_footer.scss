@@ -125,14 +125,14 @@
     width: 32px;
     height: 32px;
     display: block;
-    fill: currentColor;
+    fill: $primary-color;
+    background-color: $accent-color;
     border-radius: 50%;
 }
 
-.social-footer__link:hover,
-.social-footer__link:focus {
-    color: $second-color;
-    background-color: $accent-color;
+.footer__social__link:hover,
+.footer__social__link:focus {
+    fill: $second-color;
 }
 
 
