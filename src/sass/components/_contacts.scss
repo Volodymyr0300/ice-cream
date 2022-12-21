@@ -439,6 +439,8 @@
 
 .contacts__button-submit--locations {
     width: 134px;
+    text-decoration: none;
+    padding: 12px 34px;
     @media screen and (min-width:768px) {
             font-size: 14px;
             line-height: 1.21;
@@ -461,9 +463,6 @@
     
 }
 
-.contacts__modal-form__link {
-    text-decoration: none;
-}
 
 /* modalka 2*/
 
@@ -490,6 +489,7 @@
 
 .contacts__form-input:focus-visible {
     outline: none;
+    justify-content: center;
 }
 
 .contacts__form-input {
