@@ -427,7 +427,7 @@ body.modal.active {
     border-radius: 10px;
   }
   &.overlay.active {
-    overflow: scroll;
+    // overflow: scroll;
     opacity: 1;
     visibility: visible;
     transition: opacity 1s $cubic, visibility 1s $cubic;
