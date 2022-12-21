@@ -178,7 +178,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
     @media screen and (min-width: $min-desktop) {
       width: 370px;
-      height: 719px;
+      height: 536px;
     }
     &--ice-cream {
       background-color: $ice-cream-color;
@@ -216,15 +216,13 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   &__title {
     text-align: center;
     text-transform: uppercase;
-    padding-top: 123px;
+    padding-top: 124px;
     margin-bottom: 40px;
     @media screen and (min-width: $min-tablet) {
       padding-top: 108px;
     }
     @media screen and (min-width: $min-desktop) {
       padding-top: 165px;
-    }
-    @media screen and (min-width: $min-desktop) {
       margin-bottom: 66px;
     }
 
@@ -354,6 +352,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     fill: currentColor;
     background-color: inherit;
     cursor: pointer;
+    //  margin-bottom: 24px;
     @media screen and (min-width: $min-tablet) {
       bottom: 20px;
     }
