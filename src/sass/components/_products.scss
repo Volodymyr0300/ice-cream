@@ -411,7 +411,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   transition: 0.3s all;
 }
 body.modal.active {
-  height: 100vh;
+  // height: 100vh;
   overflow-y: scroll;
 }
 //Налаштування модалки
