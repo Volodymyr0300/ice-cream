@@ -1,0 +1,175 @@
+<section class="header__backgraund">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a href="./index.html">
+          <img src="./images/header/logo.png" alt="logo company"
+        /></a>
+        <ul class="header__list">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="./index.html">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#about">How it’s made?</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#products">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+        <div class="buttons-conteiner">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32" height="32" aria-label="mobile menu switcher">
+              <use
+                class="icon-menu"
+                href="./images/icons_sprite.svg#btn_menu"
+              ></use>
+            </svg>
+          </button>
+          <button
+            class="header__btn js-open-modal"
+            type="button"
+            data-modal="buynow"
+          >
+            Buy now
+            <svg class="icon__arrow-short" width="12" height="12">
+              <use href="./images/icons_sprite.svg#arrow_short"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  
+    <!-- mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="menu__nav">
+        <a class="mobile_logo" href="./index.html">
+          <img
+            src="./images/header/logo.png"
+            width="48px"
+            height="44px"
+            alt="logo company"
+        /></a>
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu_button-close js-modal-close" width="32" height="32">
+            <use href="./images/icons_sprite.svg#btn_close-white"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile__menu-list">
+        <li class="mobile_menu-item">
+          <a href="./index.html" class="mobile_menu__link">Home</a>
+        </li>
+        <li class="mobile_menu-item">
+          <a href="#about" class="mobile_menu__link header__link--current"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="mobile_menu-item">
+          <a href="#products" class="mobile_menu__link">Our products</a>
+        </li>
+        <li class="mobile_menu-item">
+          <a href="#contacts" class="mobile_menu__link">Contacts</a>
+        </li>
+      </ul>
+      <!-- <button
+        class="mobile__btn-bye js-open-modal"
+        data-modal="buynow"
+        type="button">
+            Buy now
+        <svg class="icon__arrow-short" width="6" height="10">
+          <use href="./images/icons_sprite.svg#arrow-short"></use>
+        </svg>
+      </button> -->
+    </div>
+  
+    <!-- modal-window -->
+    <!-- <div class="backdrop1" > -->
+    <div class="buynow modal" data-modal="buynow">
+      <button class="modal__btn--close js-modal-close" type="button">
+        <svg class="modal__cross js-modal-close">
+          <use href="./images/about/symbol-defs.svg#icon-modal-cross"></use>
+        </svg>
+      </button>
+      <p class="main-title">Buy now</p>
+      <!-- <div class="mobile-menu__picture">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <p class="mobile-menu__title-products">ice cream</p>
+             </li>
+            <li class="mobile-menu__item">
+              <p class="mobile-menu__title-products">ice coffee</p>
+            </li>
+            <li class="mobile-menu__item">
+              <p class="mobile-menu__title-products">milkshake</p>
+            </li>
+          </ul>
+        </div> -->
+      <ul class="buynow-modal__list list">
+        <li class="buynow__iten buynow__iten--ice-cream">
+          <h3 class="h3 buynow__title buynow__title--ice-cream">ice cream</h3>
+        </li>
+        <li class="buynow__iten buynow__iten--ice-coffee">
+          <h3 class="h3 buynow__title buynow__title--ice-coffee">ice coffee</h3>
+        </li>
+        <li class="buynow__iten buynow__iten--milkshakes">
+          <h3 class="h3 buynow__title buynow__title--ice-cream">milkshakes</h3>
+        </li>
+      </ul>
+      <form class="modal-form">
+        <div class="modal-form__field">
+          <label for="name-form" class="modal-form__lable"></label>
+          <div class="modal-form__icon-wrap">
+            <input
+              class="modal-form__input"
+              id="modal-form__name"
+              type="text"
+              name="user_name"
+              required
+              placeholder="Name"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+              title="Input 2 words with a space."
+              minlength="7"
+            />
+          </div>
+        </div>
+        <div class="modal-form__field">
+          <label for="telephone-form" class="modal-form__lable"></label>
+          <div class="modal-form__icon-wrap">
+            <input
+              id="telephone-form"
+              class="modal-form__input"
+              type="tel"
+              name="telephone_form"
+              required
+              placeholder="Phone"
+              minlength="12"
+            />
+          </div>
+        </div>
+  
+        <div class="modal-form__field modal-form__comment">
+          <label for="comment" class="modal-form__lable"></label>
+          <textarea
+            class="modal-form__textarea modal-form__input"
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="10"
+            placeholder="Comment"
+          ></textarea>
+        </div>
+        <!-- <button class="agreement__btn" type="submit">Submit</button> -->
+        <button class="submit__button--center" type="submit">Submit</button>
+        <!--  -->
+      </form>
+    </div>
+    <!-- </div> -->
+    <div class="overlay js-overlay-modal"></div>
+  </section>
+  
