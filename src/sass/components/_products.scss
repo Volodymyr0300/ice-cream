@@ -410,10 +410,10 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   z-index: 20;
   transition: 0.3s all;
 }
-body.modal.active {
-  // height: 100vh;
-  overflow-y: scroll;
-}
+// body.modal.active {
+//   // height: 100vh;
+//   overflow-y: scroll;
+// }
 //Налаштування модалки
 .products {
   &.modal {
@@ -433,7 +433,7 @@ body.modal.active {
     transition: opacity 1s $cubic, visibility 1s $cubic;
   }
   &.modal.active {
-    overflow: scroll;
+    overflow-y: scroll;
     opacity: 1;
     visibility: visible;
     width: 280px;
