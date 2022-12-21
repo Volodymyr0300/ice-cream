@@ -4,6 +4,7 @@ body {
   background-image: url(../images/backgroud_mobile@1x.jpg);
   background-repeat: repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   // mobile screen retina
   @media screen and (min-device-pixel-ratio: 2),
