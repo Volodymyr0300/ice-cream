@@ -421,8 +421,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
       transform: scale(1.2);
     }
   } //&__text
-  &__button {
-    // position: absolute;
+  &.button--arrow {
     border: none;
     display: block;
     margin: 0 auto;
