@@ -41,6 +41,8 @@ $milkshakes-color: #d6936d;
     font-size: 14px;
     border: none;
     cursor: pointer;
+
+    transition: $bck-transition;
   }
   &:hover {
     background-color: $btn-hover;
@@ -239,6 +241,12 @@ $milkshakes-color: #d6936d;
   font-size: 14px;
   border: none;
   cursor: pointer;
+
+  transition: $bck-transition;
+
+  &:hover, &:focus {
+    background-color: #0A8817;
+}
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -681,8 +689,8 @@ $milkshakes-color: #d6936d;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 132px;
-  height: 139px;
+  width: 156px;
+  height: 159px;
   background-color: inherit;
   transform: translate(-50%, -70%);
   background-size: contain;
@@ -716,6 +724,8 @@ $milkshakes-color: #d6936d;
     background-color: $btn-hover;
     transition-property: border-color;
   }
+
+  transition: $bck-transition;
 }
 
 .buynow__iten {
