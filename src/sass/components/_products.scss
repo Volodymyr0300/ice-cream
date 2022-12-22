@@ -428,6 +428,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     overflow-y: scroll;
     opacity: 1;
     visibility: visible;
+    padding: 0;
     width: 280px;
     @media screen and (min-width: $min-tablet) {
       width: 568px;
