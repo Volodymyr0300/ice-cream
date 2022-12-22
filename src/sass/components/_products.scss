@@ -44,7 +44,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   transform: translate($x__number, $y__number) scale(1); /* 100%*/
 }
 
-//анімація item
+//анімації
 @keyframes item-jump {
   0% {
     transform: perspective(400px) translateY(-10px);
@@ -86,14 +86,85 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   }
   //підібрати час/метод таймінгу/затримку/к-ть повторів
 }
+@keyframes slide-to-bottom-desktop {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) translateY(-500px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-500px);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-500px);
+  }
+  75% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 2em;
+  }
 
-/* глобальні налаштування */
-//body {
-// .products.modal {
-//   // height: 100vh;
-//   // overflow-y: hidden;
-// }
-//}
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 0.06em;
+    // transform: scale(1.5);
+  }
+}
+@keyframes slide-to-bottom-tablet {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) translateY(-350px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-350px);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-350px);
+  }
+  75% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 1.5em;
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 0.06em;
+    // transform: scale(1.5);
+  }
+}
+@keyframes slide-to-bottom-mobile {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) translateY(-350px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-350px);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-350px);
+  }
+  75% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 1em;
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 0.06em;
+    // transform: scale(1.5);
+  }
+}
+
 /*загальне налаштування для кнопок */
 .btn {
   border: none;
@@ -107,6 +178,15 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 
 //Секція products
 .products {
+  & .title--animation {
+    animation: slide-to-bottom-mobile 5s ease-in-out 200ms both;
+    @media screen and (min-width: $min-tablet) {
+      animation: slide-to-bottom-tablet 5s ease-in-out 200ms both;
+    }
+    @media screen and (min-width: $min-desktop) {
+      animation: slide-to-bottom-desktop 5s ease-in-out 200ms both;
+    }
+  }
   & .section-subtitle {
     font-weight: 800;
     font-size: 18px;
@@ -127,8 +207,6 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 
   & .section-title {
     font-family: 'Seymour One', sans-serif;
-    // font-style: normal;
-    // font-weight: 400;
     font-size: 30px;
     line-height: calc(38 / 30);
     text-align: center;
@@ -166,7 +244,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     position: relative;
     padding: 0;
     width: 280px;
-    height: 420px;
+    // height: 420px;
     border-radius: 24px;
     @media screen and (max-width: $max-mobile) {
       &:not(:last-child) {
@@ -175,11 +253,11 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
     @media screen and (min-width: $min-tablet) {
       width: 224px;
-      height: 428px;
+      // height: 428px;
     }
     @media screen and (min-width: $min-desktop) {
       width: 370px;
-      height: 536px;
+      // height: 536px;
     }
     &--ice-cream {
       background-color: $ice-cream-color;
@@ -213,14 +291,14 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   &__title {
     text-align: center;
     text-transform: uppercase;
-    padding-top: 124px;
+    padding-top: 123px;
     margin-bottom: 40px;
     @media screen and (min-width: $min-tablet) {
       padding-top: 108px;
     }
     @media screen and (min-width: $min-desktop) {
       padding-top: 165px;
-      margin-bottom: 66px;
+      margin-bottom: 67px;
     }
 
     &--ice-cream {
@@ -326,35 +404,37 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   }
   &__text {
     text-align: center;
+    // margin: 0 auto;
     padding: 0 40px;
+    height: 148px;
     @media screen and (min-width: $min-tablet) {
       padding: 0 26px;
+      height: 175px;
     }
     @media screen and (min-width: $min-desktop) {
       padding: 0 64px;
+      height: 142px;
     }
     transition: $transform 5s $cubic;
     &:focus,
     &:hover {
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
   } //&__text
   &__button {
-    position: absolute;
+    // position: absolute;
     border: none;
     display: block;
-    left: 50%;
-    bottom: 24px;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     fill: currentColor;
     background-color: inherit;
     cursor: pointer;
-    //  margin-bottom: 24px;
+    padding-bottom: 24px;
     @media screen and (min-width: $min-tablet) {
-      bottom: 20px;
+      padding-bottom: 20px;
     }
     @media screen and (min-width: $min-desktop) {
-      bottom: 67px;
+      padding-bottom: 67px;
     }
   } //&__button
 
@@ -365,11 +445,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
       transform: rotate(360deg);
     }
   }
-  // &__icon-cross {
-  //   fill:  #817C7C;
-  //   /* хрестик,коло stroke :/*var(--button-bg-color--);  */
-  // }
-} //products
+}
 //Вікно modal products
 //placeholder позиціонування overlay
 %fixed00-100 {
@@ -381,21 +457,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   background: rgba(0, 0, 0, 0.2);
   // opacity: 1;
 }
-// body {
-//   overflow-scroll;
-// }
-// //Налаштування backdrop
-// .backdrop {
-//   @extend %fixed00-100;
-//   overflow-y: scroll;
-//   transition: opacity $duration $cubic, visibility $duration $cubic;
-//   &.is-hidden {
-//     // @extend %is-hidden;
-//     & .modal {
-//       transform: scale(0.01);
-//     }
-//   }
-// }
+
 .overlay {
   /* Скрываем подложку  */
   opacity: 0;
@@ -406,10 +468,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   z-index: 20;
   transition: 0.3s all;
 }
-// body.modal.active {
-//   // height: 100vh;
-//   overflow-y: scroll;
-// }
+
 //Налаштування модалки
 .products {
   &.modal {
@@ -433,6 +492,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     overflow-y: scroll;
     opacity: 1;
     visibility: visible;
+    padding: 0;
     width: 280px;
     @media screen and (min-width: $min-tablet) {
       width: 568px;
@@ -598,7 +658,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
-}
+} //
 .ingr {
   &__list {
     width: 100%;
