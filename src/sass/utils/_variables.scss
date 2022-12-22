@@ -4,9 +4,12 @@ $accent-color: #F8D24E;
 $main-text-color: #131313;
 $btn-hover: #0A8817;
 $btn-disable: #ABABAB;
+$footer__bottom--text: #7A7A7A;
+$footer__border: #E1E1E1;
 
 // TRANSITIONS
 $color-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $bck-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $shadow-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $border-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$fill-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
