@@ -27,7 +27,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 @mixin centeredFixed($x__abs: left, $y__abs: top) {
   position: fixed;
   $x__number: -50%;
-  $y__number: -50%;
+  $y__number: -47%;
 
   @if $x__abs == left {
     left: 50%;
