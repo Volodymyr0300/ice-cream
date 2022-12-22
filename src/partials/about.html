@@ -1,10 +1,18 @@
 <section class="about" id="about">
   <div class="about__container">
-    <p class="about__text-slogan">tradition and love</p>
-    <h2 class="about__title">how it’s made?</h2>
+    <p class="about__text-slogan text-focus-in" data-aos="flip-left">
+      tradition and love
+    </p>
+    <h2 class="about__title text-focus-in" data-aos="flip-right">
+      how it’s made?
+    </h2>
     <ul class="about__list">
       <li class="about__item">
-        <div class="about__bc-img"></div>
+        <div
+          class="about__bc-img heartbeat"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        ></div>
         <img
           class="about__cow-img"
           srcset="
@@ -21,41 +29,42 @@
         />
       </li>
       <li class="about__item">
-        <p class="about__text">
+        <p class="about__text" data-aos="fade-down-left">
           Ice is a place where you will become not only a little happier, but
           also healthier. Health is the main value for us, and we follow it when
           creating our handmade desserts.
         </p>
-        <p class="about__text">
+        <p class="about__text" data-aos="fade-left">
           We use traditional recipes and 100% natural ingredients. Our products
           are so natural that they can be given to children from the age of
           three years. Sweets lovers can expect 55 types of ice cream, 15 types
           of coffee and 23 milkshakes.
         </p>
-        <p class="about__text">
+        <p class="about__text" data-aos="fade-up-left">
           This is enough to choose ice cream and coffee for any mood!
         </p>
         <button
-          class="about__btn js-open-modal"
+          class="about__btn js-open-modal vibrate-3"
           type="button"
           data-modal="about__data-modal"
+          data-aos="zoom-in"
         >
           <span class="about__btn-text">Read more</span>
           <svg class="about__btn-svg js-modal-close" width="12" height="12">
             <use href="./images/about/symbol-defs.svg#icon-arrow"></use>
           </svg>
         </button>
-        <div class="modal" data-modal="about__data-modal">
+        <div class="about modal" data-modal="about__data-modal">
           <svg class="modal__cross js-modal-close">
             <use href="./images/about/symbol-defs.svg#icon-modal-cross"></use>
           </svg>
-          <h3 class="about__modal-title">How it’s made?</h3>
+          <h3 class="about__modal-title colorchanging">How it’s made?</h3>
           <iframe
             class="about__modal-iframe"
             src="http://www.youtube.com/embed/CcCj5geNRwM"
             frameborder="0"
           ></iframe>
-          <p class="about__modal-text">
+          <p class="about__modal-text colorchanging">
             How do they make ice cream in factory? It is one of a short video in
             a series of short, concise videos that reveal the mysteries behind
             how everyday things happen.
