@@ -292,12 +292,7 @@
         line-height: 1.29;
         cursor: pointer;
     border-radius: 10px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    cursor: pointer;
-    border-radius: 10px;
+    
 }
 
 .contacts__btn-locations {
@@ -306,6 +301,9 @@
     margin-top: 20px;
     margin-bottom: 16px;
     color: $main-text-color;
+
+    transition: $bck-transition;
+
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -344,6 +342,9 @@
     background-color: transparent;
     color: #000000;
     border: 2px solid $accent-color;
+
+    transition: $border-transition;
+
     &:focus-visible {
         outline: none;
     }
@@ -435,6 +436,35 @@
     margin: 0 auto;
     cursor: pointer;
     height: 42px;
+    transition: $color-transition;
+    &:focus-visible {
+            outline: none;
+        }
+    
+        &:focus-visible {
+            outline: none;
+        }
+    
+        &:hover {
+            background-color: $btn-hover;
+            color: #000000;
+        }
+    
+        &:focus {
+            background-color: $btn-hover;
+            color: #FFFFFF;
+            fill: #FFFFFF;
+        }
+    
+        &:disabled,
+        &[disabled] {
+            background: $btn-disable;
+        }
+    
+        &:disabled,
+        &[disabled] {
+            background: $btn-disable;
+        }
 }
 
 .contacts__button-submit--locations {
