@@ -88,8 +88,8 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 }
 @keyframes slide-to-bottom {
   0% {
-    opacity: 0;
-    transform: perspective(400px) translateY(-50px);
+    opacity: 1;
+    transform: perspective(400px) translateY(-500px);
   }
 
   50% {
