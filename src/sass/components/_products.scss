@@ -751,6 +751,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 }
 /* кнопка відправлення форми */
 .submit__button--center {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   margin-bottom: 40px;
