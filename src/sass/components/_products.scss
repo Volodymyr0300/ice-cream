@@ -164,6 +164,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   &__item {
     margin: 0 auto;
     position: relative;
+    padding: 0;
     width: 280px;
     height: 420px;
     border-radius: 24px;
@@ -208,11 +209,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
       height: 318px;
     }
   }
-  //:before {
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -81%);
-  //}
+
   &__title {
     text-align: center;
     text-transform: uppercase;
@@ -390,7 +387,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 // //Налаштування backdrop
 // .backdrop {
 //   @extend %fixed00-100;
-//   overflow-y: scroll; /*щоб не скролився контент під ним*/
+//   overflow-y: scroll;
 //   transition: opacity $duration $cubic, visibility $duration $cubic;
 //   &.is-hidden {
 //     // @extend %is-hidden;
@@ -403,7 +400,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  // pointer-events: none;
   @extend %fixed00-100;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
