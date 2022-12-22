@@ -41,6 +41,8 @@ $milkshakes-color: #d6936d;
     font-size: 14px;
     border: none;
     cursor: pointer;
+
+    transition: $bck-transition;
   }
   &:hover {
     background-color: $btn-hover;
@@ -126,7 +128,6 @@ $milkshakes-color: #d6936d;
     align-items: center;
     justify-content: center;
 
-   
     padding: 0;
     background-color: transparent;
     cursor: pointer;
@@ -241,6 +242,12 @@ $milkshakes-color: #d6936d;
   border: none;
   cursor: pointer;
 
+  transition: $bck-transition;
+
+  &:hover, &:focus {
+    background-color: #0A8817;
+}
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -263,11 +270,11 @@ $milkshakes-color: #d6936d;
     visibility: hidden;
     pointer-events: none;
   }
-  & .modal {
-    width: 280px;
-    @media screen and (min-width: 768px) {
-      width: 568;
-    }
+}
+.modal-header {
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 568;
   }
 }
 .overlay {
@@ -682,8 +689,8 @@ $milkshakes-color: #d6936d;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 132px;
-  height: 139px;
+  width: 156px;
+  height: 159px;
   background-color: inherit;
   transform: translate(-50%, -70%);
   background-size: contain;
@@ -705,6 +712,22 @@ $milkshakes-color: #d6936d;
   color: #131313;
   border: none;
 }
+.submit-header {
+  cursor: pointer;
+
+  &:focus {
+    background-color: $btn-hover;
+    color: #fff;
+    transition-property: border-color;
+  }
+  &:hover {
+    background-color: $btn-hover;
+    transition-property: border-color;
+  }
+
+  transition: $bck-transition;
+}
+
 .buynow__iten {
   margin: 0 auto;
   width: 132px;
