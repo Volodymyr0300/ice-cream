@@ -292,12 +292,8 @@
         line-height: 1.29;
         cursor: pointer;
     border-radius: 10px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    cursor: pointer;
-    border-radius: 10px;
+    transition: $color-transition;
+    transition: $border-transition;
 }
 
 .contacts__btn-locations {
@@ -435,6 +431,35 @@
     margin: 0 auto;
     cursor: pointer;
     height: 42px;
+    transition: $color-transition;
+    &:focus-visible {
+            outline: none;
+        }
+    
+        &:focus-visible {
+            outline: none;
+        }
+    
+        &:hover {
+            background-color: $btn-hover;
+            color: #000000;
+        }
+    
+        &:focus {
+            background-color: $btn-hover;
+            color: #FFFFFF;
+            fill: #FFFFFF;
+        }
+    
+        &:disabled,
+        &[disabled] {
+            background: $btn-disable;
+        }
+    
+        &:disabled,
+        &[disabled] {
+            background: $btn-disable;
+        }
 }
 
 .contacts__button-submit--locations {
