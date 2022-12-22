@@ -1,18 +1,21 @@
 .hero {
+  background-color: $primary-color;
+}
+
+.hero__container {
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-      padding-bottom: 24px;
+      padding: 0 20px 24px 20px;
     }
     @media screen and (min-width: 1200px) {
-      padding-bottom: 103px;
+      padding: 0 20px 103px 20px;
     }
     @media screen and (max-width: 767px){
-      padding-bottom: 236px;
+      padding: 0 20px 236px 20px;
     }
-   width: 100%;
     position: relative;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-color: $primary-color;
+    
     background-size: contain;
     @media screen and (max-width: 767px) {
       background-image: url(../images/hero/points@1x_mobile.png);
