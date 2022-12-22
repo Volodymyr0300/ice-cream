@@ -86,24 +86,75 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   }
   //підібрати час/метод таймінгу/затримку/к-ть повторів
 }
-@keyframes slide-to-bottom {
+@keyframes slide-to-bottom-desktop {
   0% {
-    opacity: 0.2;
+    opacity: 0.3;
     transform: perspective(400px) translateY(-500px);
   }
   25% {
-    opacity: 0.4;
-    transform: perspective(400px) translateY(-500px);
-  }
-  50% {
     opacity: 0.5;
     transform: perspective(400px) translateY(-500px);
   }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-500px);
+  }
   75% {
-    opacity: 0.7;
+    opacity: 1;
     transform: perspective(400px) translateY(0);
     letter-spacing: 2em;
-    // transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 0.06em;
+    // transform: scale(1.5);
+  }
+}
+@keyframes slide-to-bottom-tablet {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) translateY(-350px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-350px);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-350px);
+  }
+  75% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 1.5em;
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 0.06em;
+    // transform: scale(1.5);
+  }
+}
+@keyframes slide-to-bottom-mobile {
+  0% {
+    opacity: 0.3;
+    transform: perspective(400px) translateY(-350px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: perspective(400px) translateY(-350px);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(400px) translateY(-350px);
+  }
+  75% {
+    opacity: 1;
+    transform: perspective(400px) translateY(0);
+    letter-spacing: 1em;
   }
 
   100% {
@@ -128,7 +179,13 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 //Секція products
 .products {
   & .title--animation {
-    animation: slide-to-bottom 10s ease-in-out 200ms both;
+    animation: slide-to-bottom-mobile 5s ease-in-out 200ms both;
+    @media screen and (min-width: $min-tablet) {
+      animation: slide-to-bottom-tablet 5s ease-in-out 200ms both;
+    }
+    @media screen and (min-width: $min-desktop) {
+      animation: slide-to-bottom-desktop 5s ease-in-out 200ms both;
+    }
   }
   & .section-subtitle {
     font-weight: 800;
