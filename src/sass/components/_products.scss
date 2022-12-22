@@ -128,7 +128,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 //Секція products
 .products {
   & .title--animation {
-    animation: slide-to-bottom 5s ease-in-out 200ms both;
+    animation: slide-to-bottom 10s ease-in-out 200ms both;
   }
   & .section-subtitle {
     font-weight: 800;
