@@ -1,8 +1,9 @@
 .advantages--section {
+  padding-bottom: 32px;
   background-color: $primary-color;
   // TABLET
   @media screen and (min-width: 768px) {
-    padding-bottom: 0px;
+    padding-bottom: 60px;
   }
   // DESKTOP
   @media screen and (min-width: 1200px) {
@@ -13,23 +14,18 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 16px 0 16px;
-  // DESKTOP
-  @media screen and (min-width: 1200px) {
-    height: 225px;
-  }
+ 
 }
 .advantages--list {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding-bottom: 32px;
   // MOBILE
   @media screen and (min-width: 480px) {
     flex-direction: column;
   }
   // TABLET
   @media screen and (min-width: 768px) {
-    padding-bottom: 60px;
     gap: 80px;
     justify-content: center;
     flex-direction: row;
