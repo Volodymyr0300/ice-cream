@@ -1,3 +1,3 @@
 import './many-modal';
 import './mobile-menu';
-import './slider';
+// import './slider';
