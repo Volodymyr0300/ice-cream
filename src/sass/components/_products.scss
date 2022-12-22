@@ -166,7 +166,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     position: relative;
     padding: 0;
     width: 280px;
-    height: 420px;
+    // height: 420px;
     border-radius: 24px;
     @media screen and (max-width: $max-mobile) {
       &:not(:last-child) {
@@ -175,11 +175,11 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
     @media screen and (min-width: $min-tablet) {
       width: 224px;
-      height: 428px;
+      // height: 428px;
     }
     @media screen and (min-width: $min-desktop) {
       width: 370px;
-      height: 536px;
+      // height: 536px;
     }
     &--ice-cream {
       background-color: $ice-cream-color;
@@ -213,7 +213,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   &__title {
     text-align: center;
     text-transform: uppercase;
-    padding-top: 124px;
+    padding-top: 123px;
     margin-bottom: 40px;
     @media screen and (min-width: $min-tablet) {
       padding-top: 108px;
@@ -327,11 +327,14 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   &__text {
     text-align: center;
     padding: 0 40px;
+    height: 148px;
     @media screen and (min-width: $min-tablet) {
       padding: 0 26px;
+      height: 175px;
     }
     @media screen and (min-width: $min-desktop) {
       padding: 0 64px;
+      height: 142px;
     }
     transition: $transform 5s $cubic;
     &:focus,
@@ -340,21 +343,25 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
   } //&__text
   &__button {
-    position: absolute;
+    // position: absolute;
     border: none;
     display: block;
-    left: 50%;
-    bottom: 24px;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    margin-bottom: 24px;
+    // left: 50%;
+    // bottom: 24px;
+    // transform: translate(-50%, -50%);
     fill: currentColor;
     background-color: inherit;
     cursor: pointer;
     //  margin-bottom: 24px;
     @media screen and (min-width: $min-tablet) {
-      bottom: 20px;
+      // bottom: 20px;
+      margin-bottom: 20px;
     }
     @media screen and (min-width: $min-desktop) {
-      bottom: 67px;
+      // bottom: 67px;
+      margin-bottom: 67px;
     }
   } //&__button
 
