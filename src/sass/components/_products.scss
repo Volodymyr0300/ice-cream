@@ -89,11 +89,11 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 @keyframes slide-to-bottom-desktop {
   0% {
     opacity: 0.3;
-    transform: perspective(400px) translateY(-500px);
+    transform: perspective(400px) translate(-620px, 10px);
   }
   25% {
     opacity: 0.5;
-    transform: perspective(400px) translateY(-500px);
+    transform: perspective(400px) translateY(-620px);
   }
   50% {
     opacity: 1;
@@ -115,15 +115,15 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 @keyframes slide-to-bottom-tablet {
   0% {
     opacity: 0.3;
-    transform: perspective(400px) translateY(-350px);
+    transform: perspective(400px) translate(-410px, 10px);
   }
   25% {
     opacity: 0.5;
-    transform: perspective(400px) translateY(-350px);
+    transform: perspective(400px) translateY(-410px);
   }
   50% {
     opacity: 1;
-    transform: perspective(400px) translateY(-350px);
+    transform: perspective(400px) translateY(-410px);
   }
   75% {
     opacity: 1;
@@ -141,15 +141,18 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 @keyframes slide-to-bottom-mobile {
   0% {
     opacity: 0.3;
-    transform: perspective(400px) translateY(-350px);
+    // transform: perspective(400px) translateY(-450px);
+    transform: perspective(400px) translate(-360px, 10px);
   }
   25% {
     opacity: 0.5;
-    transform: perspective(400px) translateY(-350px);
+    transform: perspective(400px) translateY(-360px);
+    // transform: perspective(400px) translate(-450px, 20px);
   }
   50% {
     opacity: 1;
-    transform: perspective(400px) translateY(-350px);
+    transform: perspective(400px) translateY(-360px);
+    // transform: perspective(400px) translate(-450px, 20px);
   }
   75% {
     opacity: 1;
@@ -268,7 +271,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     &--milkshakes {
       background-color: $milkshakes-color;
     }
-    animation: item-jump 1s $cubic 5;
+    animation: item-jump 1s $cubic 2s 9;
   } //&__item
   %products-before {
     content: '';
@@ -421,8 +424,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
       transform: scale(1.2);
     }
   } //&__text
-  &__button {
-    // position: absolute;
+  &.button--arrow {
     border: none;
     display: block;
     margin: 0 auto;
@@ -482,7 +484,6 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     border-radius: 10px;
   }
   &.overlay.active {
-    height: 67ph;
     overflow: hidden;
     opacity: 1;
     visibility: visible;
@@ -494,8 +495,11 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     visibility: visible;
     padding: 0;
     width: 280px;
+    height: 100vh;
+    // height: 500px;
     @media screen and (min-width: $min-tablet) {
       width: 568px;
+      // height: 600px;
     }
     @include centeredFixed();
     transition: $transform 1s $cubic, $transform 1s $cubic;
@@ -751,6 +755,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 }
 /* кнопка відправлення форми */
 .submit__button--center {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -761,6 +766,13 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   line-height: calc(15 / 12);
   color: $main-text-color;
+  &:hover {
+    background: $btn-hover;
+  }
+  &:focus {
+    background: $btn-hover;
+    color: $second-color;
+  }
 }
 // .buynow {
 //   &-modal__list {
