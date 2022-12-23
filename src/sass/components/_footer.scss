@@ -154,8 +154,14 @@
 .footer__contacts-text--tel {
 color: $second-color;
 text-decoration: none;
-
+transition: $color-transition;
 }
+
+.footer__contacts-text--tel:hover,
+.footer__contacts-text--tel:focus {
+    color: $accent-color;
+}
+
 
 .footer__bottom {
     border-top: 1 solid $footer__border;
@@ -192,4 +198,27 @@ text-decoration: none;
             font-size: 12px;
         }
         
+}
+
+.button-up {
+
+        width: 40px;
+            height: 40px;
+            z-index: 10;
+            fill: $primary-color;
+            opacity: .8;
+            background-color: $accent-color;
+            transition: $fill-transition;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+}
+
+.button-up:hover,
+.button-up:focus {
+    fill: $second-color;
 }
