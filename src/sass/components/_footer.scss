@@ -114,6 +114,7 @@
     fill: $primary-color;
     background-color: $accent-color;
     border-radius: 50%;
+    transition: $fill-transition;
 }
 
 .footer__social__link:hover,
@@ -157,15 +158,9 @@ text-decoration: none;
 }
 
 .footer__bottom {
-    border-top: 1px solid #E1E1E1;
+    border-top: 1 solid $footer__border;
 
-    @media screen and (min-width: 1200px) {
-
-        width: 1167px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
+   
 }
 
 .footer__bottom--text{
@@ -175,7 +170,7 @@ text-decoration: none;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    color: #7A7A7A;
+    color:$footer__bottom--text;
     
 
         @media screen and (max-width: 767px) {
