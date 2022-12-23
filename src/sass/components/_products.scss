@@ -93,7 +93,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   }
   25% {
     opacity: 0.5;
-    transform: perspective(400px) translateY(-500px);
+    transform: perspective(400px) translateY(-620px);
   }
   50% {
     opacity: 1;
@@ -142,14 +142,17 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   0% {
     opacity: 0.3;
     transform: perspective(400px) translateY(-350px);
+    // transform: perspective(400px) translate(-450px, 20px);
   }
   25% {
     opacity: 0.5;
     transform: perspective(400px) translateY(-350px);
+    // transform: perspective(400px) translate(-450px, 20px);
   }
   50% {
     opacity: 1;
     transform: perspective(400px) translateY(-350px);
+    // transform: perspective(400px) translate(-450px, 20px);
   }
   75% {
     opacity: 1;
