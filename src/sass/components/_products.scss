@@ -495,10 +495,11 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     visibility: visible;
     padding: 0;
     width: 280px;
-    height: 500px;
+    height: 100vh;
+    // height: 500px;
     @media screen and (min-width: $min-tablet) {
       width: 568px;
-      height: 600px;
+      // height: 600px;
     }
     @include centeredFixed();
     transition: $transform 1s $cubic, $transform 1s $cubic;
