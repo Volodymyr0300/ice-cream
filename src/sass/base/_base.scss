@@ -14,7 +14,7 @@ body {
   }
 
   // tablet screen
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 768px) {
     background-image: url(../images/background_tablet@1x.jpg);
 
     // tablet screen retina
@@ -26,7 +26,7 @@ body {
   }
 
   // desktop screen
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1200px) {
     background-image: url(../images/backgroud_desktop@1x.jpg);
 
     // desktop screen retina
