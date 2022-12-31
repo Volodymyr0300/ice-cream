@@ -244,9 +244,10 @@ $milkshakes-color: #d6936d;
 
   transition: $bck-transition;
 
-  &:hover, &:focus {
-    background-color: #0A8817;
-}
+  &:hover,
+  &:focus {
+    background-color: #0a8817;
+  }
 
   @media screen and (min-width: 768px) {
     display: none;

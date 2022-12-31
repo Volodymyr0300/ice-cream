@@ -27,7 +27,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 @mixin centeredFixed($x__abs: left, $y__abs: top) {
   position: fixed;
   $x__number: -50%;
-  $y__number: -47%;
+  $y__number: -50%;
 
   @if $x__abs == left {
     left: 50%;
@@ -244,11 +244,16 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
   } // &__list
   &__item {
     margin: 0 auto;
-    position: relative;
+    // position: relative;
     padding: 0;
     width: 280px;
     // height: 420px;
     border-radius: 24px;
+    transition: $transform 1s $cubic;
+    &:focus,
+    &:hover {
+      transform: scale(1.2);
+    }
     @media screen and (max-width: $max-mobile) {
       &:not(:last-child) {
         margin-bottom: 168px;
@@ -271,7 +276,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     &--milkshakes {
       background-color: $milkshakes-color;
     }
-    animation: item-jump 1s $cubic 2s 9;
+    // animation: item-jump 1s $cubic 2s 9;
   } //&__item
   %products-before {
     content: '';
@@ -419,10 +424,10 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
       height: 142px;
     }
     transition: $transform 5s $cubic;
-    &:focus,
-    &:hover {
-      transform: scale(1.2);
-    }
+    // &:focus,
+    // &:hover {
+    //   transform: scale(1.2);
+    // }
   } //&__text
   &.button--arrow {
     border: none;
@@ -715,6 +720,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
 
   /*.form__input*/
   &__input {
+    position: relative;
     display: block;
     width: 240px;
     padding: 11px 10px;
@@ -729,6 +735,30 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     outline: none;
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid $primary-color;
+    // &:invalid:after {
+    //   position: absolute;
+    //   display: block;
+    //   top: 25px;
+    //   right: 25px;
+    //   width: 5px;
+    //   height: 5px;
+    //   content: '✖';
+    //   // padding-left: 5px;
+    //   color: #8b0000;
+    // }
+
+    // &:valid:after {
+    //   position: absolute;
+    //   display: block;
+    //   top: 25px;
+    //   right: 25px;
+    //   width: 5px;
+    //   height: 5px;
+    //   content: '✓';
+    //   // padding-left: 5px;
+    //   color: #009000;
+    // }
+
     &.icecoffee {
       border: 1px solid $ice-coffee-color;
     }
@@ -752,6 +782,18 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
   }
 }
+input:invalid {
+  background-color: #ffdddd;
+}
+
+input:valid {
+  background-color: #ddffdd;
+}
+
+// input:required {
+//   border-color: #d33434;
+//   border-width: 3px;
+// }
 /* кнопка відправлення форми */
 .submit__button--center {
   cursor: pointer;
