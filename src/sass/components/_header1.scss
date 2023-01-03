@@ -272,12 +272,23 @@ $milkshakes-color: #d6936d;
     pointer-events: none;
   }
 }
-.modal-header {
-  width: 280px;
-  @media screen and (min-width: 768px) {
-    width: 568;
+
+.buynow.modal-header {
+
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+    overflow-y: scroll;
+    
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 54px;
+  }
+  
+
 }
+
+
 .overlay {
   /* Скрываем подложку  */
   opacity: 0;
@@ -314,8 +325,8 @@ $milkshakes-color: #d6936d;
   align-items: center;
   justify-content: center;
 
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
 
   border: rgba(0, 0, 0, 0.1);
@@ -330,14 +341,18 @@ $milkshakes-color: #d6936d;
     fill: $btn-hover;
   }
 }
-.modal-form__field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+
+.modal-form__field:not(:last-child) {
+  display: block;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+   margin-bottom: 16px;
+    
+  }
 }
+
 .modal-form__lable {
-  margin-bottom: 4px;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -419,8 +434,12 @@ $milkshakes-color: #d6936d;
   color: #212121;
 }
 
-.modal-form__comment {
+.modal-form__field.modal-form__comment {
   margin-bottom: 26px;
+
+  @media screen and (min-widht: 768px) {
+    margin-bottom: 32px;
+  }
 }
 .modal-form__textarea {
   padding: 8px 12px;
@@ -568,26 +587,26 @@ $milkshakes-color: #d6936d;
 .buynow {
   & .main-title {
     text-align: center;
-    padding-top: 28px;
     margin-bottom: 83px;
-    @media screen and (min-width: $min-tablet) {
-      padding-top: 32px;
-      margin-bottom: 103px;
-    }
+
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: calc(24 / 16);
+
+    color: $main-text-color;
+    
     @media screen and (min-width: $min-tablet) {
+      margin-bottom: 103px;
+
       font-size: 20px;
       line-height: calc(28 / 20);
     }
-
-    color: $main-text-color;
   }
+
+
   &-modal__list {
-    margin: 0 auto;
     margin-bottom: 31px;
     @media screen and (min-width: $min-tablet) {
       display: flex;
@@ -603,7 +622,6 @@ $milkshakes-color: #d6936d;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(20 / 16);
-    text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $main-text-color;
@@ -713,8 +731,9 @@ $milkshakes-color: #d6936d;
   color: #131313;
   border: none;
 }
-.submit-header {
+.submit-header.submit__button--center {
   cursor: pointer;
+  margin-bottom: 0px;
 
   &:focus {
     background-color: $btn-hover;
