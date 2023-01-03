@@ -252,7 +252,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     transition: $transform 1s $cubic;
     &:focus,
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
     @media screen and (max-width: $max-mobile) {
       &:not(:last-child) {
@@ -567,7 +567,7 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     width: 132px;
     // height: 139px;
     margin-bottom: 30px;
-    transition: $transform $duration $cubic;
+    transition: $transform 1s $cubic;
     &:hover,
     &:focus {
       transform: scale(2);
