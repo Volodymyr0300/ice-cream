@@ -205,11 +205,8 @@ $milkshakes-color: #d6936d;
   &:visited {
     color: #131313;
   }
-
-  // &.header__link--current {
-  //   color: rgba(19, 19, 19, 1);
-  // }
 }
+
 .menu_button-close {
   fill: #fcfcfc;
   border: currentColor;
@@ -272,12 +269,23 @@ $milkshakes-color: #d6936d;
     pointer-events: none;
   }
 }
-.modal-header {
-  width: 280px;
-  @media screen and (min-width: 768px) {
-    width: 568;
+
+.buynow.modal-header {
+
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+    overflow-y: scroll;
+    
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 54px;
+  }
+  
+
 }
+
+
 .overlay {
   /* Скрываем подложку  */
   opacity: 0;
@@ -314,8 +322,8 @@ $milkshakes-color: #d6936d;
   align-items: center;
   justify-content: center;
 
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
 
   border: rgba(0, 0, 0, 0.1);
@@ -330,14 +338,18 @@ $milkshakes-color: #d6936d;
     fill: $btn-hover;
   }
 }
-.modal-form__field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+
+.modal-form__field:not(:last-child) {
+  display: block;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+   margin-bottom: 16px;
+    
+  }
 }
+
 .modal-form__lable {
-  margin-bottom: 4px;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -347,14 +359,6 @@ $milkshakes-color: #d6936d;
   position: relative;
 }
 .modal-form__input {
-  // height: 40px;
-  // width: 100%;
-  // padding: 8px 12px;
-
-  // border-color: rgba(33, 33, 33, 0.2);
-  // border-radius: 10px;
-  // background: rgba(248, 210, 78, 0.1);
-  // border: 1px solid #84a178;
   margin: 0 auto;
   display: block;
   width: 224px;
@@ -419,175 +423,45 @@ $milkshakes-color: #d6936d;
   color: #212121;
 }
 
-.modal-form__comment {
+.modal-form__field.modal-form__comment {
   margin-bottom: 26px;
+
+  @media screen and (min-widht: 768px) {
+    margin-bottom: 32px;
+  }
 }
 .modal-form__textarea {
   padding: 8px 12px;
-  // width: 100%;
-  // height: 65px;
   resize: none;
   @media screen and (min-width: $min-tablet) {
     padding: 11px 16px;
   }
 }
 
-// .agreement {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center-;
-//   gap: 10px;
-//   margin-bottom: 30px;
-// }
-// .agreement__checkbox {
-//   appearance: none;
-//   width: 16px;
-//   height: 16px;
-
-//   @include border($size: 2px, $color: #212121);
-
-//   border-radius: 3px;
-//   cursor: pointer;
-
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-position: center;
-
-//   &:checked {
-//     background-color: $primary-color;
-//     border-color: transparent;
-//     transition-duration: 250ms;
-//     transition-timing-function: 250ms;
-//   }
-// }
-
-// .agreement__text {
-//   user-select: none;
-//   color: #757575;
-// }
-// .agreement__link {
-//   color: $accent-color;
-// }
-
-// .agreement__btn {
-//   display: block;
-//   margin: 0 auto;
-//   width: 114px;
-//   height: 42px;
-
-//   font-weight: 600;
-//   font-size: 12px;
-//   line-height: 1.25;
-//   border: none;
-//   border-radius: 10px;
-
-//   background-color: $accent-color;
-//   color: rgba(19, 19, 19, 1);
-
-//   transition-property: background-color;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover {
-//     background-color: $btn-hover;
-//     color: #212121;
-//   }
-
-//   &:focus {
-//     background-color: $btn-hover;
-//     color: #fff;
-//     fill: #fff;
-//   }
-// }
-// .mobile-menu__img {
-//   width: 160px;
-// }
-// .mobile-menu__picture {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-// .mobile-menu__products {
-//   width: 132px;
-//   height: 136px;
-//   display: flex;
-//   flex-direction: column-reverse;
-//   align-items: center;
-//   padding-bottom: 20px;
-// }
-// .mobile-menu__products.mmp-first {
-//   border: 2px solid #96af8c;
-//   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-//   border-radius: 15px;
-//   position: absolute;
-//   bottom: -20%;
-//   left: 10%;
-//   width: 82%;
-//   z-index: -1;
-// }
-// .mobile-menu__products.mmp-second {
-//   background-color: #efd478;
-//   border: 2px solid #efd478;
-//   box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
-//   border-radius: 15px;
-//   position: absolute;
-//   bottom: -20%;
-//   left: 10%;
-//   width: 82%;
-//   z-index: -1;
-// }
-// .mobile-menu__products.mmp-third {
-//   border: 2px solid #d6936d;
-//   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-//   border-radius: 15.7808px;
-//   position: absolute;
-//   bottom: -20%;
-//   left: 10%;
-//   width: 82%;
-//   z-index: -1;
-// }
-// .mobile-menu__title-products {
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.25;
-
-//   text-align: center;
-//   letter-spacing: 0.04em;
-//   text-transform: uppercase;
-
-//   color: #131313;
-// }
-// .mobile-menu__item {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-//   margin-bottom: 40px;
-// }
 
 .buynow {
   & .main-title {
     text-align: center;
-    padding-top: 28px;
     margin-bottom: 83px;
-    @media screen and (min-width: $min-tablet) {
-      padding-top: 32px;
-      margin-bottom: 103px;
-    }
+
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: calc(24 / 16);
+
+    color: $main-text-color;
+    
     @media screen and (min-width: $min-tablet) {
+      margin-bottom: 103px;
+
       font-size: 20px;
       line-height: calc(28 / 20);
     }
-
-    color: $main-text-color;
   }
+
+
   &-modal__list {
-    margin: 0 auto;
     margin-bottom: 31px;
     @media screen and (min-width: $min-tablet) {
       display: flex;
@@ -603,19 +477,13 @@ $milkshakes-color: #d6936d;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(20 / 16);
-    text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $main-text-color;
     text-transform: uppercase;
     padding-top: 95px;
     margin-bottom: 20px;
-    // padding-left: 16px;
-    // padding-right: 16px;
-    // @media screen and (min-width: $min-tablet) {
-    //   padding-left: 13px;
-    //   padding-right: 13px;
-    // }
+    
     &--ice-cream {
       position: relative;
     }
@@ -713,8 +581,9 @@ $milkshakes-color: #d6936d;
   color: #131313;
   border: none;
 }
-.submit-header {
+.submit-header.submit__button--center {
   cursor: pointer;
+  margin-bottom: 0px;
 
   &:focus {
     background-color: $btn-hover;
