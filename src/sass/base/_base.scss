@@ -6,6 +6,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
+  cursor: url(../images/cursor.png), pointer;
+
   // mobile screen retina
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
