@@ -782,11 +782,10 @@ $placeholder-color: rgba(117, 117, 117, 0.5);
     }
   }
 }
-input:invalid {
+input:invalid:not(:placeholder-shown) {
   background-color: #ffdddd;
 }
-
-input:valid {
+input:valid:not(:placeholder-shown) {
   background-color: #ddffdd;
 }
 
