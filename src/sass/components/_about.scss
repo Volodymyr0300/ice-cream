@@ -353,8 +353,8 @@
 }
 
 .heartbeat {
-  -webkit-animation: heartbeat 3s ease-in-out infinite both;
-  animation: heartbeat 3s ease-in-out infinite both;
+  -webkit-animation: heartbeat 5s ease-in-out infinite both;
+  animation: heartbeat 5s ease-in-out infinite both;
 }
 
 @-webkit-keyframes heartbeat {
@@ -427,8 +427,8 @@
 }
 
 .vibrate-3 {
-  -webkit-animation: vibrate-3 0.75s linear infinite both;
-  animation: vibrate-3 0.75s linear infinite both;
+  -webkit-animation: vibrate-3 5s linear infinite both;
+  animation: vibrate-3 5s linear infinite both;
 }
 
 @-webkit-keyframes vibrate-3 {
@@ -524,10 +524,14 @@
   }
 }
 
+
 .colorchanging {
   -webkit-animation: colorchanging 3s ease-in-out infinite both;
   animation: colorchanging 3s ease-in-out infinite both;
 }
+
+
+
 
 @keyframes colorchanging {
   0% {
